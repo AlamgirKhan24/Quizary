@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizary — History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sidebar.css">
+<link rel="stylesheet" href="assets/css/topbar.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/history.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <nav class="sidebar" aria-label="Primary">
+    <div class="sb-logo">Q</div>
+
+    <a href="index.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
+      <span class="sb-tooltip">Home</span>
+    </a>
+
+    <a href="categories.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+      <span class="sb-tooltip">Categories</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg>
+      <span class="sb-tooltip">Help</span>
+    </a>
+
+    <a href="history.html" class="sb-icon active" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+      <span class="sb-tooltip">History</span>
+    </a>
+
+    <a href="leaderboard.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      <span class="sb-tooltip">Leaderboard</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+      <span class="sb-tooltip">Stats</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1Z"/></svg>
+      <span class="sb-tooltip">Settings</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="5" height="6" rx="1.5"/><rect x="16.5" y="13" width="5" height="6" rx="1.5"/><path d="M19.5 19v.5a3 3 0 0 1-3 3h-2.3"/></svg>
+      <span class="sb-tooltip">Support</span>
+    </a>
+
+    <div class="sb-spacer"></div>
+
+    <a href="login.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>
+      <span class="sb-tooltip">Log out</span>
+    </a>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-col">
+
+    <header class="top-bar panel">
+      <div class="welcome">Welcome back, <b>Pranav</b> 👋</div>
+
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input type="text" placeholder="Search history...">
+      </label>
+
+      <div class="profile-wrap">
+        <button class="profile" aria-expanded="false" aria-haspopup="true">
+          <div class="avatar avatar-fallback">PK</div>
+          <div>
+            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-level">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              Level 12
+            </div>
+          </div>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="profile-menu">
+          <a href="profile.html">My Profile</a>
+          <a href="#">Achievements</a>
+          <a href="#">Settings</a>
+          <a href="login.html">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="hist-header-text">
+      <h1 class="hist-title">History</h1>
+      <p class="hist-subtitle">Track your quiz activity and performance over time.</p>
+    </section>
+
+    <!-- ============ BODY: LIST + SIDE ============ -->
+    <div class="hist-body">
+
+      <!-- ============ MAIN LIST ============ -->
+      <div class="hist-main">
+
+        <!-- Filters -->
+        <div class="hist-filters">
+          <div class="hist-tabs">
+            <button class="hist-tab hist-tab-active" type="button">All</button>
+            <button class="hist-tab" type="button">Completed</button>
+            <button class="hist-tab" type="button">In Progress</button>
+            <button class="hist-tab" type="button">Bookmarked</button>
+          </div>
+
+          <div class="hist-filters-right">
+            <button class="hist-select" type="button">
+              All Categories
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <button class="hist-icon-btn" type="button" aria-label="Filter by date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- History rows -->
+        <div class="hist-list">
+
+          <a href="results.html" class="panel hist-row">
+            <div class="icon-circle icon-circle-md">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a13 13 0 0 0 0 18 13 13 0 0 0 0-18Z"/><path d="M3.5 9h17M3.5 15h17"/></svg>
+            </div>
+            <div class="hist-row-info">
+              <div class="hist-row-title">Geography Quiz</div>
+              <div class="hist-row-sub">Geography</div>
+            </div>
+            <div class="hist-row-when">
+              <div class="hist-row-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+                12 May 2025
+              </div>
+              <div class="hist-row-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+                04:32 PM
+              </div>
+            </div>
+            <div class="hist-row-result">
+              <span class="status-badge status-badge--done">Completed</span>
+              <div class="hist-row-pct">80%</div>
+              <div class="hist-row-frac">4 / 5 Correct</div>
+            </div>
+            <span class="hist-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="results.html" class="panel hist-row">
+            <div class="icon-circle icon-circle-md">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg>
+            </div>
+            <div class="hist-row-info">
+              <div class="hist-row-title">Science Quiz</div>
+              <div class="hist-row-sub">Science</div>
+            </div>
+            <div class="hist-row-when">
+              <div class="hist-row-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+                11 May 2025
+              </div>
+              <div class="hist-row-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+                07:15 PM
+              </div>
+            </div>
+            <div class="hist-row-result">
+              <span class="status-badge status-badge--done">Completed</span>
+              <div class="hist-row-pct">40%</div>
+              <div class="hist-row-frac">4 / 10 Correct</div>
+            </div>
+            <span class="hist-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="results.html" class="panel hist-row">
+            <div class="icon-circle icon-circle-md">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10.5l8-4 8 4V21"/><path d="M4 21h16"/><path d="M8 21v-6h3v6M13 21v-6h3v6"/><path d="M12 6.5V4"/></svg>
+            </div>
+            <div class="hist-row-info">
+              <div class="hist-row-title">History Quiz</div>
+              <div class="hist-row-sub">History</div>
+            </div>
+            <div class="hist-row-when">
+              <div class="hist-row-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+                10 May 2025
+              </div>
+              <div class="hist-row-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+                06:20 PM
+              </div>
+            </div>
+            <div class="hist-row-result">
+              <span class="status-badge status-badge--done">Completed</span>
+              <div class="hist-row-pct">20%</div>
+              <div class="hist-row-frac">2 / 10 Correct</div>
+            </div>
+            <span class="hist-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="results.html" class="panel hist-row">
+            <div class="icon-circle icon-circle-md">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="11" rx="1.5"/><path d="M2.5 19.5h19"/><path d="M9.5 19.5 10 16h4l.5 3.5"/></svg>
+            </div>
+            <div class="hist-row-info">
+              <div class="hist-row-title">Technology Quiz</div>
+              <div class="hist-row-sub">Technology</div>
+            </div>
+            <div class="hist-row-when">
+              <div class="hist-row-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+                10 May 2025
+              </div>
+              <div class="hist-row-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+                09:45 AM
+              </div>
+            </div>
+            <div class="hist-row-result">
+              <span class="status-badge status-badge--progress">In Progress</span>
+              <div class="hist-row-pct">0%</div>
+              <div class="hist-row-frac">0 / 12 Correct</div>
+            </div>
+            <span class="hist-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="results.html" class="panel hist-row">
+            <div class="icon-circle icon-circle-md">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5A2.5 2.5 0 0 0 7 7v.3A2.5 2.5 0 0 0 5.5 12 2.5 2.5 0 0 0 7 16.5V17a2.5 2.5 0 0 0 5 0V7a2.5 2.5 0 0 0-2.5-2.5Z"/><path d="M14.5 4.5A2.5 2.5 0 0 1 17 7v.3a2.5 2.5 0 0 1 1.5 4.7A2.5 2.5 0 0 1 17 16.5V17a2.5 2.5 0 0 1-5 0V7a2.5 2.5 0 0 1 2.5-2.5Z"/></svg>
+            </div>
+            <div class="hist-row-info">
+              <div class="hist-row-title">General Knowledge Quiz</div>
+              <div class="hist-row-sub">General Knowledge</div>
+            </div>
+            <div class="hist-row-when">
+              <div class="hist-row-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+                09 May 2025
+              </div>
+              <div class="hist-row-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+                12:30 PM
+              </div>
+            </div>
+            <div class="hist-row-result">
+              <span class="status-badge status-badge--done">Completed</span>
+              <div class="hist-row-pct">60%</div>
+              <div class="hist-row-frac">9 / 15 Correct</div>
+            </div>
+            <span class="hist-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a href="results.html" class="panel hist-row">
+            <div class="icon-circle icon-circle-md">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="m12 3.5 1.6 4.6M12 20.5l-1.6-4.6M3.5 12l4.6-1.6M20.5 12l-4.6 1.6M6 6l3.5 2.5M18 6l-3.5 2.5M6 18l3.5-2.5M18 18l-3.5-2.5"/></svg>
+            </div>
+            <div class="hist-row-info">
+              <div class="hist-row-title">Sports Quiz</div>
+              <div class="hist-row-sub">Sports</div>
+            </div>
+            <div class="hist-row-when">
+              <div class="hist-row-date">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+                08 May 2025
+              </div>
+              <div class="hist-row-time">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+                05:10 PM
+              </div>
+            </div>
+            <div class="hist-row-result">
+              <span class="status-badge status-badge--done">Completed</span>
+              <div class="hist-row-pct">100%</div>
+              <div class="hist-row-frac">10 / 10 Correct</div>
+            </div>
+            <span class="hist-chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- ============ RIGHT SIDEBAR ============ -->
+      <aside class="hist-side">
+
+        <div class="premium-card panel-gold">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
+          </div>
+          <div>
+            <div class="premium-title">Upgrade to Premium</div>
+            <div class="premium-sub">Unlock unlimited quizzes, detailed analytics and more.</div>
+          </div>
+          <a href="#" class="premium-arrow" aria-label="Upgrade">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="panel hist-panel">
+          <h3 class="hist-panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18.5 9 12l4 3 7.5-8.5"/><path d="M15.5 6.5H20.5V11.5"/></svg>
+            History Overview
+          </h3>
+          <div class="hist-overview-grid">
+            <div class="hist-overview-cell">
+              <div class="hist-overview-label">Total Quizzes</div>
+              <div class="hist-overview-num">28</div>
+            </div>
+            <div class="hist-overview-cell">
+              <div class="hist-overview-label">Completed</div>
+              <div class="hist-overview-num">20</div>
+            </div>
+            <div class="hist-overview-cell">
+              <div class="hist-overview-label">In Progress</div>
+              <div class="hist-overview-num">5</div>
+            </div>
+            <div class="hist-overview-cell">
+              <div class="hist-overview-label">Avg. Score</div>
+              <div class="hist-overview-num">68%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel hist-panel">
+          <div class="hist-panel-header-row">
+            <h3 class="hist-panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+              Recent Activity
+            </h3>
+            <a href="#" class="hist-view-all">View All</a>
+          </div>
+
+          <ul class="hist-timeline">
+            <li class="hist-timeline-item">
+              <span class="hist-timeline-dot"></span>
+              <div class="icon-circle icon-circle-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a13 13 0 0 0 0 18 13 13 0 0 0 0-18Z"/><path d="M3.5 9h17M3.5 15h17"/></svg>
+              </div>
+              <div>
+                <div class="hist-timeline-title">Completed Geography Quiz</div>
+                <div class="hist-timeline-sub">12 May 2025, 04:32 PM</div>
+              </div>
+            </li>
+            <li class="hist-timeline-item">
+              <span class="hist-timeline-dot hist-timeline-dot--done"></span>
+              <div class="icon-circle icon-circle-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg>
+              </div>
+              <div>
+                <div class="hist-timeline-title">Completed Science Quiz</div>
+                <div class="hist-timeline-sub">11 May 2025, 07:15 PM</div>
+              </div>
+            </li>
+            <li class="hist-timeline-item hist-timeline-item--last">
+              <span class="hist-timeline-dot hist-timeline-dot--progress"></span>
+              <div class="icon-circle icon-circle-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="11" rx="1.5"/><path d="M2.5 19.5h19"/><path d="M9.5 19.5 10 16h4l.5 3.5"/></svg>
+              </div>
+              <div>
+                <div class="hist-timeline-title">Started Technology Quiz</div>
+                <div class="hist-timeline-sub">10 May 2025, 09:45 AM</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel hist-panel">
+          <div class="hist-panel-header-row">
+            <h3 class="hist-panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18.5 9 12l4 3 7.5-8.5"/><path d="M15.5 6.5H20.5V11.5"/></svg>
+              Performance Trend
+            </h3>
+            <button class="hist-week-select" type="button">
+              This Week
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="hist-chart-wrap">
+            <div class="hist-chart-axis">
+              <span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span>
+            </div>
+            <svg class="hist-chart-svg" viewBox="0 0 320 140" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="trendFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(224,168,78,0.35)"/>
+                  <stop offset="100%" stop-color="rgba(224,168,78,0)"/>
+                </linearGradient>
+              </defs>
+              <polyline points="10,105 60,45 110,72 160,60 210,20 260,55 310,35" fill="none" stroke="var(--gold-bright)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polygon points="10,105 60,45 110,72 160,60 210,20 260,55 310,35 310,140 10,140" fill="url(#trendFill)"/>
+              <circle cx="10" cy="105" r="4" fill="var(--gold-bright)"/>
+              <circle cx="60" cy="45" r="4" fill="var(--gold-bright)"/>
+              <circle cx="110" cy="72" r="4" fill="var(--gold-bright)"/>
+              <circle cx="160" cy="60" r="4" fill="var(--gold-bright)"/>
+              <circle cx="210" cy="20" r="4" fill="var(--gold-bright)"/>
+              <circle cx="260" cy="55" r="4" fill="var(--gold-bright)"/>
+              <circle cx="310" cy="35" r="4" fill="var(--gold-bright)"/>
+            </svg>
+          </div>
+          <div class="hist-chart-labels">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- ============ MOTIVATIONAL BAR ============ -->
+    <section class="panel hist-motivate-bar">
+      <div class="icon-circle icon-circle-md">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6.5 6.5 0 0 0-3.7 11.8c.6.4 1 1.1 1 1.9v.3h5.4v-.3c0-.8.4-1.5 1-1.9A6.5 6.5 0 0 0 12 3Z"/></svg>
+      </div>
+      <div>
+        <div class="hist-motivate-title">Keep going, Pranav! Consistency is the key to success.</div>
+        <div class="hist-motivate-sub">You've got this! 🚀</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
