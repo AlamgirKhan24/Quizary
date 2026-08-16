@@ -1,0 +1,271 @@
+/* ==============================================
+   QUIZARY — CATEGORIES
+   Page header, summary stat tiles, category grid
+   with progress bars, and bottom request-a-category
+   bar. Depends on variables.css + base.css +
+   sidebar.css + topbar.css + components.css.
+   ============================================== */
+
+.main-col{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* ================= PAGE HEADER ================= */
+.cat-header-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.cat-header-text{
+  min-width:240px;
+}
+
+.cat-title{
+  font-size:38px;
+  line-height:1.15;
+  margin-bottom:4px;
+}
+
+.cat-subtitle{
+  font-size:13.5px;
+  color:var(--text-2);
+}
+
+.cat-premium{
+  flex-direction:row;
+  align-items:center;
+  gap:14px;
+  padding:16px 44px 16px 18px;
+  position:relative;
+  min-width:300px;
+  flex:1;
+  max-width:420px;
+}
+
+.cat-premium .icon-circle{
+  flex-shrink:0;
+}
+
+.cat-premium .premium-title{
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--gold-bright);
+}
+
+.cat-premium .premium-sub{
+  font-size:12px;
+  color:var(--text-2);
+  margin-top:2px;
+  line-height:1.4;
+}
+
+.cat-premium .premium-arrow{
+  position:absolute;
+  top:50%;
+  right:16px;
+  transform:translateY(-50%);
+}
+
+/* ================= SUMMARY STATS ================= */
+.cat-stats-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:16px;
+}
+
+.cat-stat-card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:20px 22px;
+}
+
+.cat-stat-num{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:24px;
+  line-height:1.2;
+}
+
+.cat-stat-label{
+  font-size:12.5px;
+  color:var(--text-2);
+  margin-top:2px;
+}
+
+/* ================= CATEGORY GRID ================= */
+.cat-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:16px;
+}
+
+.cat-card{
+  display:flex;
+  flex-direction:column;
+  padding:22px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  position:relative;
+  isolation:isolate;
+}
+
+.cat-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:radial-gradient(220px circle at var(--glow-x, 50%) var(--glow-y, 20%), var(--gold-tint-10), transparent 70%);
+  opacity:0;
+  transition:opacity .25s ease;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.cat-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-card);
+  border-color:var(--gold-tint-25);
+}
+
+.cat-card:hover::after{
+  opacity:1;
+}
+
+.icon-circle-lg{
+  width:56px;
+  height:56px;
+  margin-bottom:16px;
+}
+
+.icon-circle-lg svg{
+  width:26px;
+  height:26px;
+}
+
+.cat-icon-sigma{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:24px;
+}
+
+.cat-card-text{
+  margin-bottom:18px;
+}
+
+.cat-card-title{
+  font-size:16px;
+  margin-bottom:4px;
+}
+
+.cat-card-sub{
+  font-size:12.5px;
+  color:var(--text-2);
+}
+
+.cat-progress-row{
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.cat-progress{
+  flex:1;
+  height:6px;
+  border-radius:var(--radius-pill);
+  background:rgba(255,255,255,0.08);
+  overflow:hidden;
+}
+
+.cat-progress-fill{
+  height:100%;
+  border-radius:var(--radius-pill);
+  background:linear-gradient(90deg, var(--gold), var(--gold-bright));
+}
+
+.cat-go{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--border-soft);
+  color:var(--text-0);
+  transition:background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.cat-go svg{
+  width:15px;
+  height:15px;
+}
+
+.cat-card:hover .cat-go{
+  background:var(--gold-tint-15);
+  border-color:var(--gold-tint-25);
+  color:var(--gold-bright);
+  transform:translateX(2px);
+}
+
+/* ================= REQUEST CATEGORY BAR ================= */
+.cat-request-bar{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:22px 26px;
+  flex-wrap:wrap;
+}
+
+.cat-request-text{
+  flex:1;
+  min-width:220px;
+}
+
+.cat-request-title{
+  font-size:14.5px;
+  font-weight:600;
+}
+
+.cat-request-sub{
+  font-size:12.5px;
+  color:var(--gold);
+  margin-top:3px;
+}
+
+.cat-request-btn{
+  flex-shrink:0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 980px){
+  .cat-header-row{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .cat-premium{
+    max-width:none;
+  }
+}
+
+@media (max-width: 640px){
+  .cat-title{
+    font-size:30px;
+  }
+  .cat-request-bar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .cat-request-btn{
+    width:100%;
+    justify-content:center;
+  }
+}

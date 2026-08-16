@@ -1,0 +1,60 @@
+/* ==============================================
+   QUIZARY — DESIGN TOKENS
+   Single source of truth for color, radius, type.
+   Every other CSS file reads from these variables.
+   ============================================== */
+
+:root{
+  /* ---- Base surface colors ---- */
+  --bg-0:#0c0a08;              /* deepest background */
+  --bg-1:#171310;              /* background gradient end */
+
+  /* ---- Glass panel surfaces ---- */
+  --panel:rgba(255,255,255,0.045);        /* default glass fill */
+  --panel-strong:rgba(255,255,255,0.07);  /* hover / emphasized glass */
+  --panel-blur:20px;                      /* backdrop-filter blur amount */
+  --panel-blur-soft:16px;                 /* lighter blur for small elements */
+
+  /* ---- Borders ---- */
+  --border:rgba(255,255,255,0.09);
+  --border-soft:rgba(255,255,255,0.06);
+
+  /* ---- Accent (gold) ---- */
+  --gold:#e0a84e;
+  --gold-bright:#f0bd6a;
+  --gold-glow:rgba(224,168,78,0.35);      /* used in box-shadows */
+  --gold-tint-10:rgba(224,168,78,0.10);   /* subtle gold-tinted glass fill */
+  --gold-tint-15:rgba(224,168,78,0.15);
+  --gold-tint-22:rgba(224,168,78,0.22);
+  --gold-tint-25:rgba(224,168,78,0.25);
+
+  /* ---- Text ---- */
+  --text-0:#f4efe8;   /* headings / primary */
+  --text-1:#cfc7bd;   /* body */
+  --text-2:#948b80;   /* muted / captions */
+
+  /* ---- Status ---- */
+  --success:#4ade80;
+
+  /* ---- Radius scale ---- */
+  --radius-lg:22px;   /* panels, hero */
+  --radius-md:16px;   /* cards, inputs */
+  --radius-sm:12px;   /* buttons, chips */
+  --radius-pill:30px; /* badges */
+
+  /* ---- Spacing scale ---- */
+  --space-xs:8px;
+  --space-sm:12px;
+  --space-md:18px;
+  --space-lg:24px;
+  --space-xl:34px;
+
+  /* ---- Typography ---- */
+  --font-display:'Playfair Display', serif;
+  --font-body:'Inter', sans-serif;
+
+  /* ---- Shadows ---- */
+  --shadow-panel:0 20px 50px rgba(0,0,0,0.5);
+  --shadow-card:0 10px 24px rgba(0,0,0,0.4);
+  --shadow-glow-gold:0 8px 24px rgba(224,168,78,0.25);
+}

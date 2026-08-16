@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizary — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sidebar.css">
+<link rel="stylesheet" href="assets/css/topbar.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <nav class="sidebar" aria-label="Primary">
+    <div class="sb-logo">Q</div>
+
+    <a href="index.html" class="sb-icon active" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
+      <span class="sb-tooltip">Home</span>
+    </a>
+
+    <a href="categories.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+      <span class="sb-tooltip">Categories</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+      <span class="sb-tooltip">History</span>
+    </a>
+
+    <a href="leaderboard.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      <span class="sb-tooltip">Leaderboard</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+      <span class="sb-tooltip">Stats</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1Z"/></svg>
+      <span class="sb-tooltip">Settings</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="5" height="6" rx="1.5"/><rect x="16.5" y="13" width="5" height="6" rx="1.5"/><path d="M19.5 19v.5a3 3 0 0 1-3 3h-2.3"/></svg>
+      <span class="sb-tooltip">Support</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg>
+      <span class="sb-tooltip">Help</span>
+    </a>
+
+    <div class="sb-spacer"></div>
+
+    <a href="login.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>
+      <span class="sb-tooltip">Log out</span>
+    </a>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-col">
+
+    <header class="top-bar panel">
+      <div class="welcome">Welcome back, <b>Pranav</b> 👋</div>
+
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input type="text" placeholder="Search anything...">
+      </label>
+
+      <div class="profile-wrap">
+        <button class="profile" aria-expanded="false" aria-haspopup="true">
+          <div class="avatar avatar-fallback">PK</div>
+          <div>
+            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-level">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              Level 12
+            </div>
+          </div>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="profile-menu">
+          <a href="profile.html">My Profile</a>
+          <a href="#">Achievements</a>
+          <a href="#">Settings</a>
+          <a href="login.html">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero-row">
+
+      <div class="hero-card panel">
+        <div class="hero-text">
+          <h1 class="hero-title">Hi, I'm <span class="accent">Pranav</span> 👋</h1>
+          <p class="hero-role">AI Engineer &amp; Full Stack Developer</p>
+          <p class="hero-desc">I build intelligent, scalable, and user-centric digital solutions that solve real-world problems and create meaningful impact.</p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">
+              Explore My Work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a href="#" class="btn btn-secondary">
+              Download CV
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7.5 11.5 4.5 4.5 4.5-4.5"/><path d="M5 19.5h14"/></svg>
+            </a>
+          </div>
+
+          <div class="social-row">
+            <a href="#" class="icon-circle icon-circle-sm" aria-label="GitHub">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.79-4.57 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.2C22 6.58 17.52 2 12 2Z"/></svg>
+            </a>
+            <a href="#" class="icon-circle icon-circle-sm" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3.5a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92ZM20.44 20h-3.37v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V20H9.5V8.5h3.24v1.57h.05c.45-.85 1.55-1.75 3.2-1.75 3.42 0 4.45 2.25 4.45 5.18V20Z"/></svg>
+            </a>
+            <a href="#" class="icon-circle icon-circle-sm" aria-label="Facebook">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.78 8.44-4.93 8.44-9.94Z"/></svg>
+            </a>
+            <a href="#" class="icon-circle icon-circle-sm" aria-label="Twitter">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.68.3-1.4.5-2.16.6a3.8 3.8 0 0 0 1.66-2.1c-.73.43-1.53.75-2.39.92a3.75 3.75 0 0 0-6.48 3.42A10.66 10.66 0 0 1 3.15 4.6a3.75 3.75 0 0 0 1.16 5c-.6-.02-1.17-.19-1.67-.46v.05a3.76 3.76 0 0 0 3 3.68c-.55.15-1.14.17-1.71.06a3.76 3.76 0 0 0 3.5 2.61A7.53 7.53 0 0 1 2 17.05a10.63 10.63 0 0 0 5.76 1.69c6.91 0 10.7-5.73 10.7-10.7l-.01-.49A7.6 7.6 0 0 0 22 5.9Z"/></svg>
+            </a>
+            <a href="#" class="icon-circle icon-circle-sm" aria-label="Email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="chip chip-code" aria-hidden="true">&lt;/&gt;</div>
+          <div class="chip chip-brain" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5A2.5 2.5 0 0 0 7 7v.3A2.5 2.5 0 0 0 5.5 12 2.5 2.5 0 0 0 7 16.5V17a2.5 2.5 0 0 0 5 0V7a2.5 2.5 0 0 0-2.5-2.5Z"/><path d="M14.5 4.5A2.5 2.5 0 0 1 17 7v.3a2.5 2.5 0 0 1 1.5 4.7A2.5 2.5 0 0 1 17 16.5V17a2.5 2.5 0 0 1-5 0V7a2.5 2.5 0 0 1 2.5-2.5Z"/></svg>
+          </div>
+          <div class="chip chip-ai" aria-hidden="true">AI</div>
+
+          <svg class="hero-illustration" viewBox="0 0 320 340" aria-hidden="true">
+            <circle cx="160" cy="150" r="120" fill="url(#glow)"/>
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+                <stop offset="0%" stop-color="rgba(224,168,78,0.16)"/>
+                <stop offset="100%" stop-color="rgba(224,168,78,0)"/>
+              </radialGradient>
+              <linearGradient id="hood" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#c9a578"/>
+                <stop offset="100%" stop-color="#8a6a48"/>
+              </linearGradient>
+              <linearGradient id="lap" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3a332b"/>
+                <stop offset="100%" stop-color="#221d17"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="160" cy="322" rx="95" ry="10" fill="rgba(0,0,0,0.35)"/>
+            <path d="M70 300c0-70 40-95 90-95s90 25 90 95Z" fill="url(#hood)"/>
+            <circle cx="160" cy="150" r="58" fill="#e7c39a"/>
+            <path d="M104 140c0-45 22-70 56-70s56 25 56 70c-10-18-30-28-56-28s-46 10-56 28Z" fill="#241c14"/>
+            <circle cx="140" cy="152" r="4.5" fill="#241c14"/>
+            <circle cx="182" cy="152" r="4.5" fill="#241c14"/>
+            <path d="M148 172q12 8 24 0" fill="none" stroke="#241c14" stroke-width="3" stroke-linecap="round"/>
+            <rect x="95" y="255" width="130" height="55" rx="10" fill="url(#lap)"/>
+            <rect x="103" y="230" width="114" height="34" rx="6" fill="#161310"/>
+            <text x="160" y="253" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="20" fill="#f0bd6a">Q</text>
+          </svg>
+
+          <div class="badge hero-badge">
+            <span class="badge-dot"></span>
+            Available for new projects
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="premium-card panel-gold">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
+          </div>
+          <div>
+            <div class="premium-title">Upgrade to Premium</div>
+            <div class="premium-sub">Unlock unlimited quizzes, detailed analytics and more.</div>
+          </div>
+          <a href="#" class="premium-arrow" aria-label="Upgrade">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="stat-list panel">
+          <div class="stat-row">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="17" height="12" rx="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/></svg>
+            </div>
+            <div>
+              <div class="stat-row-num">25+</div>
+              <div class="stat-row-label">Projects Completed</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7" width="17" height="12" rx="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/></svg>
+            </div>
+            <div>
+              <div class="stat-row-num">3+</div>
+              <div class="stat-row-label">Years Experience</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 8-4.5 4L9 16"/><path d="m15 8 4.5 4L15 16"/></svg>
+            </div>
+            <div>
+              <div class="stat-row-num">15+</div>
+              <div class="stat-row-label">Technologies</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="icon-circle icon-circle-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.8L12 3.5Z"/></svg>
+            </div>
+            <div>
+              <div class="stat-row-num">98%</div>
+              <div class="stat-row-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ============ WHAT I DO BEST ============ -->
+    <section id="work">
+      <div class="section-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 8-4.5 4L9 16"/><path d="m15 8 4.5 4L15 16"/></svg>
+        What I Do Best
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card panel">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5A2.5 2.5 0 0 0 7 7v.3A2.5 2.5 0 0 0 5.5 12 2.5 2.5 0 0 0 7 16.5V17a2.5 2.5 0 0 0 5 0V7a2.5 2.5 0 0 0-2.5-2.5Z"/><path d="M14.5 4.5A2.5 2.5 0 0 1 17 7v.3a2.5 2.5 0 0 1 1.5 4.7A2.5 2.5 0 0 1 17 16.5V17a2.5 2.5 0 0 1-5 0V7a2.5 2.5 0 0 1 2.5-2.5Z"/></svg>
+          </div>
+          <h3 class="feature-title">AI &amp; Machine Learning</h3>
+          <p class="feature-desc">Building intelligent models and AI-powered solutions.</p>
+          <a href="#" class="feature-link">Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="feature-card panel">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m9.5 9-2 2 2 2"/><path d="m14.5 9 2 2-2 2"/></svg>
+          </div>
+          <h3 class="feature-title">Full Stack Development</h3>
+          <p class="feature-desc">End-to-end web applications with modern technologies.</p>
+          <a href="#" class="feature-link">Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="feature-card panel">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="2.7"/><path d="M5 6v6c0 1.5 3 2.7 7 2.7s7-1.2 7-2.7V6"/><path d="M5 12v6c0 1.5 3 2.7 7 2.7s7-1.2 7-2.7v-6"/></svg>
+          </div>
+          <h3 class="feature-title">Data Engineering</h3>
+          <p class="feature-desc">Designing scalable data pipelines and architectures.</p>
+          <a href="#" class="feature-link">Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="feature-card panel">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="11" rx="2.5"/><path d="M9 7V5.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1V7"/><circle cx="9.5" cy="12.3" r="1.1"/><circle cx="14.5" cy="12.3" r="1.1"/><path d="M9.5 16h5"/></svg>
+          </div>
+          <h3 class="feature-title">Automation &amp; Bots</h3>
+          <p class="feature-desc">Automating workflows and building smart bots.</p>
+          <a href="#" class="feature-link">Explore
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOTTOM ROW ============ -->
+    <section class="bottom-grid">
+
+      <div class="panel bottom-card">
+        <h3 class="bottom-card-title">Tech Stack</h3>
+        <div class="tech-row">
+          <span class="tech-chip" title="React">
+            <svg width="26" height="26" viewBox="0 0 24 24"><g fill="none" stroke="#61dafb" stroke-width="1.5"><ellipse cx="12" cy="12" rx="10.5" ry="4.4"/><ellipse cx="12" cy="12" rx="10.5" ry="4.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10.5" ry="4.4" transform="rotate(120 12 12)"/></g><circle cx="12" cy="12" r="2" fill="#61dafb"/></svg>
+          </span>
+          <span class="tech-chip tech-chip-badge" style="background:#000;" title="Next.js">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M8.2 7.2v9.6M8.2 7.2l7.8 9.6M16 7.2v6.2" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="tech-chip tech-chip-badge" style="background:#f7df1e;" title="JavaScript">
+            <span class="tech-chip-text" style="color:#1a1a1a;">JS</span>
+          </span>
+          <span class="tech-chip" title="Python">
+            <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.2c-4 0-3.8 1.8-3.8 1.8v1.9h3.9v.6H6.6S4 6.2 4 10.3s2.3 4 2.3 4h1.4v-2s-.1-2.3 2.3-2.3h3.7s2.2 0 2.2-2.2V4.5s.3-2.3-4-2.3Zm-2.2 1.3a.7.7 0 1 1 0 1.5.7.7 0 0 1 0-1.5Z" fill="#3776ab"/><path d="M12 21.8c4 0 3.8-1.8 3.8-1.8v-1.9h-3.9v-.6h5.5s2.6.3 2.6-3.8-2.3-4-2.3-4h-1.4v2s.1 2.3-2.3 2.3H10s-2.2 0-2.2 2.2v3.1s-.3 2.3 4 2.3Zm2.2-1.3a.7.7 0 1 1 0-1.5.7.7 0 0 1 0 1.5Z" fill="#ffd43b"/></svg>
+          </span>
+          <span class="tech-chip tech-chip-badge" style="background:#3c873a;" title="Node.js">
+            <span class="tech-chip-text" style="color:#fff;">N</span>
+          </span>
+          <span class="tech-chip tech-chip-badge" style="background:#336791;" title="PostgreSQL">
+            <span class="tech-chip-text" style="color:#fff;">Pg</span>
+          </span>
+          <span class="tech-chip" title="Firebase">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffa000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4-4 6-1 11 1.3 2.2 4 2.7 5 .5 1.5 3-1 6.5-5 6.5-4.5 0-7-3-7-6.5C4 10 8 6.5 12 3Z"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="panel bottom-card">
+        <h3 class="bottom-card-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;color:var(--gold-bright);vertical-align:-3px;margin-right:6px;"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
+          Recent Achievement
+        </h3>
+        <div class="achievement-row">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+          </div>
+          <div>
+            <div class="achievement-title">Won 1st Place in AI Hackathon 2024</div>
+            <div class="achievement-sub">Built an AI solution that helps 10K+ users.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel bottom-card">
+        <h3 class="bottom-card-title">Let's Connect</h3>
+        <p class="connect-desc">I'm always open to discussing new projects, creative ideas or opportunities.</p>
+        <a href="#" class="btn btn-primary">
+          Get In Touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* ==============================================
+   QUIZARY — COMPONENTS
+   Shared building blocks: buttons, stat tiles,
+   progress bars, badges, premium callout card.
+   Depends on variables.css + base.css.
+   ============================================== */
+
+/* ---- Buttons ---- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:13px 24px;
+  border-radius:var(--radius-pill);
+  font-size:13.5px;
+  font-weight:600;
+  cursor:pointer;
+  border:1px solid transparent;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  white-space:nowrap;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+}
+
+.btn:active{
+  transform:translateY(0);
+}
+
+.btn-primary{
+  background:linear-gradient(135deg, var(--gold-bright), #b9822f);
+  color:#231705;
+  box-shadow:var(--shadow-glow-gold);
+}
+
+.btn-primary:hover{
+  box-shadow:0 10px 28px rgba(224,168,78,0.35);
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,0.04);
+  border-color:var(--border);
+  color:var(--text-0);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.07);
+}
+
+.btn-block{
+  width:100%;
+  justify-content:center;
+}
+
+.btn svg{
+  width:16px;
+  height:16px;
+  flex-shrink:0;
+}
+
+/* ---- Icon circle (used inside stat tiles, cards, badges) ---- */
+.icon-circle{
+  border-radius:50%;
+  background:var(--gold-tint-12, rgba(224,168,78,0.12));
+  border:1px solid var(--gold-tint-22);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--gold-bright);
+  flex-shrink:0;
+}
+
+.icon-circle svg{
+  width:55%;
+  height:55%;
+}
+
+.icon-circle-sm{ width:42px; height:42px; }
+.icon-circle-md{ width:52px; height:52px; }
+
+/* ---- Stat tile (used on Home + Categories stat strips) ---- */
+.stat-tile{
+  padding:22px 24px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.stat-tile-num{
+  font-size:24px;
+  font-weight:700;
+  font-family:var(--font-display);
+  line-height:1.2;
+}
+
+.stat-tile-label{
+  font-size:12.5px;
+  color:var(--text-2);
+  margin-top:2px;
+}
+
+/* ---- Progress bar (used on category cards, quiz progress) ---- */
+.progress-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.progress-track{
+  flex:1;
+  height:6px;
+  border-radius:6px;
+  background:rgba(255,255,255,0.08);
+  overflow:hidden;
+}
+
+.progress-fill{
+  height:100%;
+  border-radius:6px;
+  background:linear-gradient(90deg, var(--gold), var(--gold-bright));
+  transition:width .3s ease;
+}
+
+.progress-go{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  flex-shrink:0;
+  background:rgba(255,255,255,0.06);
+  border:1px solid var(--border-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-1);
+  cursor:pointer;
+  transition:all .15s ease;
+}
+
+.progress-go:hover{
+  color:var(--gold-bright);
+  border-color:var(--gold-tint-25);
+  background:var(--gold-tint-10);
+}
+
+.progress-go svg{
+  width:14px;
+  height:14px;
+}
+
+/* ---- Badge / pill (e.g. "Available for new projects", status tags) ---- */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(15,12,8,0.9);
+  border:1px solid var(--border);
+  padding:9px 18px;
+  border-radius:var(--radius-pill);
+  font-size:12.5px;
+  white-space:nowrap;
+  box-shadow:var(--shadow-card);
+}
+
+.badge-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--success);
+  box-shadow:0 0 8px var(--success);
+  flex-shrink:0;
+}
+
+/* ---- Premium / callout card ---- */
+.premium-card{
+  padding:18px 20px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  border:1px solid var(--gold-tint-25);
+  background:linear-gradient(135deg, var(--gold-tint-10), rgba(224,168,78,0.02));
+}
+
+.premium-title{
+  font-size:13.5px;
+  font-weight:600;
+  color:var(--gold-bright);
+  margin-bottom:2px;
+}
+
+.premium-sub{
+  font-size:12px;
+  color:var(--text-2);
+  line-height:1.4;
+}
+
+.premium-arrow{
+  margin-left:auto;
+  color:var(--gold);
+  flex-shrink:0;
+  display:flex;
+}
+
+.premium-arrow svg{
+  width:16px;
+  height:16px;
+}
+
+/* ---- Section header (e.g. "What I Do Best", "Recent Achievement") ---- */
+.section-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:4px 4px 2px 4px;
+  color:var(--gold-bright);
+  font-size:13.5px;
+  font-weight:600;
+}
+
+.section-header svg{
+  width:15px;
+  height:15px;
+}
+
+/* ---- Empty state / info banner (e.g. "Request a Category") ---- */
+.info-banner{
+  padding:22px 30px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.info-banner-title{
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:3px;
+}
+
+.info-banner-sub{
+  font-size:13px;
+  color:var(--gold);
+}
+
+.info-banner-spacer{
+  flex:1;
+}
+
+/* ---- Responsive tweaks shared across components ---- */
+@media (max-width: 640px){
+  .info-banner{
+    flex-wrap:wrap;
+  }
+  .info-banner-spacer{
+    display:none;
+  }
+  .btn-block-mobile{
+    width:100%;
+    justify-content:center;
+  }
+}
