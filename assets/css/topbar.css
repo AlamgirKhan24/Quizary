@@ -185,11 +185,137 @@
   .top-bar{
     flex-wrap:wrap;
   }
-  .welcome{
-    width:100%;
-  }
-  .search{
+ 
+    .search{
     order:3;
     width:100%;
+  }
+
+    .brand-word{
+    display:none;
+  }
+
+  .top-bar{
+    gap:8px;
+    padding:6px 8px;
+    justify-content:space-between;
+  }
+
+  .brand{
+    gap:6px;
+  }
+
+  /* ---- Search collapses to an icon button, expands on click ---- */
+   .search{
+    flex:none;
+    width:38px;
+    height:38px;
+    min-width:0;
+    padding:0;
+    justify-content:center;
+    border-radius:50%;
+    order:0;
+    overflow:hidden;
+    margin-left:auto;
+    transition:width .2s ease, border-radius .2s ease;
+  }
+
+  .search input{
+    display:none;
+    width:0;
+  }
+
+  .search.search--open{
+    width:100%;
+    border-radius:var(--radius-pill);
+    justify-content:flex-start;
+    padding:9px 16px;
+    order:10;
+    flex-basis:100%;
+  }
+
+  .search.search--open input{
+    display:block;
+    width:100%;
+  }
+
+  /* ---- Profile: avatar + Level badge only, name hidden ---- */
+  .profile{
+    padding:4px 10px 4px 4px;
+    gap:8px;
+  }
+
+  .profile-name{
+    display:none;
+  }
+
+  .profile-level{
+    margin-top:0;
+  }
+
+  .chev{
+    display:none;
+  }
+}
+/* ---- Brand (site name, replaces per-page "Welcome back" message) ---- */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+
+.brand-mark{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:linear-gradient(145deg, var(--gold-bright), #8a5a1f);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:14px;
+  color:#1a1207;
+  flex-shrink:0;
+}
+
+.brand-word{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:16px;
+  color:var(--text-0);
+}
+
+/* ---- Mobile menu toggle (hamburger) ---- */
+.menu-toggle{
+  display:none;
+  width:38px;
+  height:38px;
+  flex-shrink:0;
+  border-radius:50%;
+  border:1px solid var(--border-soft);
+  background:var(--panel);
+  color:var(--text-0);
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  backdrop-filter:blur(var(--panel-blur-soft));
+  -webkit-backdrop-filter:blur(var(--panel-blur-soft));
+}
+
+.menu-toggle svg{
+  width:18px;
+  height:18px;
+}
+
+.menu-toggle:hover{
+  border-color:var(--gold-tint-25);
+  color:var(--gold-bright);
+}
+
+@media (max-width: 640px){
+  .menu-toggle{
+    display:flex;
   }
 }
