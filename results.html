@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizary — Achievements</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sidebar.css">
+<link rel="stylesheet" href="assets/css/topbar.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/result.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <nav class="sidebar" aria-label="Primary">
+    <div class="sb-logo">Q</div>
+
+    <a href="index.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
+      <span class="sb-tooltip">Home</span>
+    </a>
+
+    <a href="categories.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+      <span class="sb-tooltip">Categories</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg>
+      <span class="sb-tooltip">Help</span>
+    </a>
+
+    <a href="history.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+      <span class="sb-tooltip">History</span>
+    </a>
+
+    <a href="achievements.html" class="sb-icon active" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      <span class="sb-tooltip">Achievements</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+      <span class="sb-tooltip">Stats</span>
+    </a>
+
+    <a href="setting.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1Z"/></svg>
+      <span class="sb-tooltip">Settings</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="5" height="6" rx="1.5"/><rect x="16.5" y="13" width="5" height="6" rx="1.5"/><path d="M19.5 19v.5a3 3 0 0 1-3 3h-2.3"/></svg>
+      <span class="sb-tooltip">Support</span>
+    </a>
+
+    <div class="sb-spacer"></div>
+
+    <a href="login.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>
+      <span class="sb-tooltip">Log out</span>
+    </a>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-col">
+
+    <header class="top-bar panel">
+      <div class="welcome">Welcome back, <b>Pranav</b> 👋</div>
+
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input type="text" placeholder="Search achievements...">
+      </label>
+
+      <div class="profile-wrap">
+        <button class="profile" aria-expanded="false" aria-haspopup="true">
+          <div class="avatar avatar-fallback">PK</div>
+          <div>
+            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-level">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              Level 12
+            </div>
+          </div>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="profile-menu">
+          <a href="profile.html">My Profile</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="setting.html">Settings</a>
+          <a href="login.html">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="ach-header-text">
+      <h1 class="ach-title">Achievements</h1>
+      <p class="ach-subtitle">Celebrate your progress and keep pushing your limits.</p>
+    </section>
+
+    <!-- ============ BODY: LIST + SIDE ============ -->
+    <div class="ach-body">
+
+      <!-- ============ MAIN COLUMN ============ -->
+      <div class="ach-main">
+
+        <!-- Filters -->
+        <div class="ach-filters">
+          <div class="ach-tabs">
+            <button class="ach-tab ach-tab-active" type="button">All Achievements</button>
+            <button class="ach-tab" type="button">Milestones</button>
+            <button class="ach-tab" type="button">Performance</button>
+            <button class="ach-tab" type="button">Streaks</button>
+            <button class="ach-tab" type="button">Special</button>
+          </div>
+
+        <div class="ach-dropdown-wrap">
+            <button class="ach-select" type="button" id="achRaritySelect" aria-expanded="false">
+              <span id="achRarityLabel">Rarity: All</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="ach-dropdown-menu" id="achRarityMenu">
+              <li data-value="all">All</li>
+              <li data-value="epic">Epic</li>
+              <li data-value="rare">Rare</li>
+              <li data-value="common">Common</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ============ ACHIEVEMENT GRID ============ -->
+        <div class="ach-grid">
+
+        <div class="panel ach-card" data-category="milestones" data-rarity="epic">
+            <span class="ach-rarity" style="color:#e0a84e;">Epic</span>
+            <div class="icon-circle icon-circle-lg ach-badge" style="background:rgba(224,168,78,0.14); border-color:rgba(224,168,78,0.3); color:#e0a84e;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+            </div>
+            <h3 class="ach-card-title">Quiz Champion</h3>
+            <p class="ach-card-desc">Complete 10 quizzes</p>
+            <div class="ach-progress-row">
+              <span class="ach-progress-label">Completed</span>
+              <span class="ach-progress-frac">10/10</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%; background:linear-gradient(90deg, #b9822f, #e0a84e);"></div></div>
+          </div>
+
+        <div class="panel ach-card" data-category="performance" data-rarity="epic">
+            <span class="ach-rarity" style="color:#b18ae0;">Epic</span>
+            <div class="icon-circle icon-circle-lg ach-badge" style="background:rgba(177,138,224,0.14); border-color:rgba(177,138,224,0.3); color:#b18ae0;">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5-4.8-4.6 6.6-.9L12 2.5Z"/></svg>
+            </div>
+            <h3 class="ach-card-title">Perfect Score</h3>
+            <p class="ach-card-desc">Score 100% in any quiz</p>
+            <div class="ach-progress-row">
+              <span class="ach-progress-label">Completed</span>
+              <span class="ach-progress-frac">1/1</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%; background:linear-gradient(90deg, #8a5fc0, #b18ae0);"></div></div>
+          </div>
+
+        <div class="panel ach-card" data-category="performance" data-rarity="rare">
+            <span class="ach-rarity" style="color:#6aa8e0;">Rare</span>
+            <div class="icon-circle icon-circle-lg ach-badge" style="background:rgba(106,168,224,0.14); border-color:rgba(106,168,224,0.3); color:#6aa8e0;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <h3 class="ach-card-title">Sharpshooter</h3>
+            <p class="ach-card-desc">Answer 100 questions correctly</p>
+            <div class="ach-progress-row">
+              <span class="ach-progress-label">Completed</span>
+              <span class="ach-progress-frac">100/100</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%; background:linear-gradient(90deg, #3f7cc0, #6aa8e0);"></div></div>
+          </div>
+
+        <div class="panel ach-card" data-category="streaks" data-rarity="epic">
+            <span class="ach-rarity" style="color:#e0a84e;">Epic</span>
+            <div class="icon-circle icon-circle-lg ach-badge" style="background:rgba(224,168,78,0.14); border-color:rgba(224,168,78,0.3); color:#e0a84e;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3-2.5 4-2.5 7a2.5 2.5 0 0 0 5 0c1.2 1.4.5 3 .5 3a6 6 0 0 1-3 8 6.5 6.5 0 0 1-6.5-6.5c0-4.5 3.5-6 4-9.5.7 1 1.5 1.3 2.5-2Z"/></svg>
+            </div>
+            <h3 class="ach-card-title">On Fire</h3>
+            <p class="ach-card-desc">Maintain a 7-day streak</p>
+            <div class="ach-progress-row">
+              <span class="ach-progress-label">Completed</span>
+              <span class="ach-progress-frac">7/7</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%; background:linear-gradient(90deg, #b9822f, #e0a84e);"></div></div>
+          </div>
+
+        <div class="panel ach-card" data-category="special" data-rarity="rare">
+            <span class="ach-rarity" style="color:#6bc27a;">Rare</span>
+            <div class="icon-circle icon-circle-lg ach-badge" style="background:rgba(107,194,122,0.14); border-color:rgba(107,194,122,0.3); color:#6bc27a;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h9.5A2.5 2.5 0 0 1 17 7v13H7.5A2.5 2.5 0 0 1 5 17.5v-13Z"/><path d="M17 7h2.5v13H9.5"/><path d="M5 17.5A2.5 2.5 0 0 1 7.5 15H17"/></svg>
+            </div>
+            <h3 class="ach-card-title">Knowledge Seeker</h3>
+            <p class="ach-card-desc">Complete quizzes from 10 different categories</p>
+            <div class="ach-progress-row">
+              <span class="ach-progress-label">Completed</span>
+              <span class="ach-progress-frac">10/10</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%; background:linear-gradient(90deg, #3e9250, #6bc27a);"></div></div>
+          </div>
+
+        <div class="panel ach-card" data-category="milestones" data-rarity="common">
+            <span class="ach-rarity" style="color:var(--text-2);">Common</span>
+            <div class="icon-circle icon-circle-lg ach-badge" style="background:rgba(255,255,255,0.06); border-color:var(--border-soft); color:var(--text-1);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+            </div>
+            <h3 class="ach-card-title">Consistent Learner</h3>
+            <p class="ach-card-desc">Study for 30 days in a row</p>
+            <div class="ach-progress-row">
+              <span class="ach-progress-label">Completed</span>
+              <span class="ach-progress-frac">30/30</span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" style="width:100%; background:rgba(255,255,255,0.35);"></div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ RIGHT SIDEBAR ============ -->
+      <aside class="ach-side">
+
+        <div class="premium-card panel-gold">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
+          </div>
+          <div>
+            <div class="premium-title">Upgrade to Premium</div>
+            <div class="premium-sub">Unlock exclusive achievements and earn more rewards.</div>
+          </div>
+          <a href="#" class="premium-arrow" aria-label="Upgrade">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- ============ YOUR PROGRESS RING ============ -->
+        <div class="panel ach-panel">
+          <h3 class="ach-panel-title">Your Progress</h3>
+          <div class="ach-ring-row">
+            <div class="ach-ring-wrap">
+              <svg class="ach-ring" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="9"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="var(--gold-bright)" stroke-width="9" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="100" transform="rotate(-90 50 50)"/>
+              </svg>
+              <div class="ach-ring-center">
+                <div class="ach-ring-num">28</div>
+                <div class="ach-ring-den">/ 45</div>
+              </div>
+            </div>
+            <div>
+              <div class="ach-ring-pct">62%</div>
+              <div class="ach-ring-label">Achievements<br>Unlocked</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ BY CATEGORY ============ -->
+        <div class="panel ach-panel">
+          <h3 class="ach-panel-title">By Category</h3>
+
+          <div class="ach-cat-list">
+            <div class="ach-cat-row">
+              <div class="ach-cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+              </div>
+              <div class="ach-cat-info">
+                <div class="ach-cat-top">
+                  <span>Milestones</span>
+                  <span>12 / 18</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width:67%;"></div></div>
+              </div>
+            </div>
+
+            <div class="ach-cat-row">
+              <div class="ach-cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 18.5 9 12l4 3 7.5-8.5"/><path d="M15.5 6.5H20.5V11.5"/></svg>
+              </div>
+              <div class="ach-cat-info">
+                <div class="ach-cat-top">
+                  <span>Performance</span>
+                  <span>8 / 14</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width:57%;"></div></div>
+              </div>
+            </div>
+
+            <div class="ach-cat-row">
+              <div class="ach-cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3-2.5 4-2.5 7a2.5 2.5 0 0 0 5 0c1.2 1.4.5 3 .5 3a6 6 0 0 1-3 8 6.5 6.5 0 0 1-6.5-6.5c0-4.5 3.5-6 4-9.5.7 1 1.5 1.3 2.5-2Z"/></svg>
+              </div>
+              <div class="ach-cat-info">
+                <div class="ach-cat-top">
+                  <span>Streaks</span>
+                  <span>5 / 7</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width:71%;"></div></div>
+              </div>
+            </div>
+
+            <div class="ach-cat-row">
+              <div class="ach-cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/></svg>
+              </div>
+              <div class="ach-cat-info">
+                <div class="ach-cat-top">
+                  <span>Special</span>
+                  <span>3 / 6</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width:50%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ RECENT ACHIEVEMENTS ============ -->
+        <div class="panel ach-panel">
+          <div class="ach-panel-header-row">
+            <h3 class="ach-panel-title">Recent Achievements</h3>
+            <a href="#" class="ach-view-all">View All</a>
+          </div>
+
+          <ul class="ach-recent-list">
+            <li class="ach-recent-item">
+              <div class="icon-circle icon-circle-sm" style="background:rgba(177,138,224,0.14); border-color:rgba(177,138,224,0.3); color:#b18ae0;">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.1 6.5L12 17.4l-5.8 3.1 1.1-6.5-4.8-4.6 6.6-.9L12 2.5Z"/></svg>
+              </div>
+              <div class="ach-recent-text">
+                <div class="ach-recent-title">Perfect Score</div>
+                <div class="ach-recent-sub">Score 100% in any quiz</div>
+              </div>
+              <div class="ach-recent-when">2 days ago</div>
+            </li>
+
+            <li class="ach-recent-item">
+              <div class="icon-circle icon-circle-sm" style="background:rgba(224,168,78,0.14); border-color:rgba(224,168,78,0.3); color:#e0a84e;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c1 3-2.5 4-2.5 7a2.5 2.5 0 0 0 5 0c1.2 1.4.5 3 .5 3a6 6 0 0 1-3 8 6.5 6.5 0 0 1-6.5-6.5c0-4.5 3.5-6 4-9.5.7 1 1.5 1.3 2.5-2Z"/></svg>
+              </div>
+              <div class="ach-recent-text">
+                <div class="ach-recent-title">On Fire</div>
+                <div class="ach-recent-sub">Maintain a 7-day streak</div>
+              </div>
+              <div class="ach-recent-when">5 days ago</div>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- ============ MOTIVATIONAL BAR ============ -->
+    <section class="panel ach-motivate-bar">
+      <div class="icon-circle icon-circle-md">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      </div>
+      <div class="ach-motivate-text">
+        <div class="ach-motivate-title">You're doing amazing, Pranav! 🏆</div>
+        <div class="ach-motivate-sub">Keep learning and unlocking new achievements.</div>
+      </div>
+      <a href="#" class="btn btn-secondary ach-motivate-btn">
+        View All Rewards
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+    </section>
+
+  </main>
+
+    <script src="assets/js/result.js"></script>
+
+</body>
+</html>
