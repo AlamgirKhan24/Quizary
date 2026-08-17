@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizary — Leaderboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sidebar.css">
+<link rel="stylesheet" href="assets/css/topbar.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/leaderboard.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <nav class="sidebar" aria-label="Primary">
+    <div class="sb-logo">Q</div>
+
+    <a href="index.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
+      <span class="sb-tooltip">Home</span>
+    </a>
+
+    <a href="categories.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+      <span class="sb-tooltip">Categories</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg>
+      <span class="sb-tooltip">Help</span>
+    </a>
+
+    <a href="history.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+      <span class="sb-tooltip">History</span>
+    </a>
+
+    <a href="leaderboard.html" class="sb-icon active" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      <span class="sb-tooltip">Leaderboard</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+      <span class="sb-tooltip">Stats</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1Z"/></svg>
+      <span class="sb-tooltip">Settings</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="5" height="6" rx="1.5"/><rect x="16.5" y="13" width="5" height="6" rx="1.5"/><path d="M19.5 19v.5a3 3 0 0 1-3 3h-2.3"/></svg>
+      <span class="sb-tooltip">Support</span>
+    </a>
+
+    <div class="sb-spacer"></div>
+
+    <a href="login.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>
+      <span class="sb-tooltip">Log out</span>
+    </a>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-col">
+
+    <header class="top-bar panel">
+      <div class="welcome">Welcome back, <b>Pranav</b> 👋</div>
+
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input type="text" placeholder="Search players...">
+      </label>
+
+      <div class="profile-wrap">
+        <button class="profile" aria-expanded="false" aria-haspopup="true">
+          <div class="avatar avatar-fallback">PK</div>
+          <div>
+            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-level">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              Level 12
+            </div>
+          </div>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="profile-menu">
+          <a href="profile.html">My Profile</a>
+          <a href="#">Achievements</a>
+          <a href="#">Settings</a>
+          <a href="login.html">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="hist-header-text">
+      <h1 class="hist-title">Leaderboard</h1>
+      <p class="hist-subtitle">See how you rank against other quiz masters.</p>
+    </section>
+
+    <!-- ============ BODY: TABLE + SIDE ============ -->
+    <div class="hist-body">
+
+      <!-- ============ MAIN COLUMN ============ -->
+      <div class="hist-main">
+
+        <!-- Filters -->
+        <div class="hist-filters">
+          <div class="hist-tabs">
+            <button class="hist-tab hist-tab-active" type="button">Global</button>
+            <button class="hist-tab" type="button">This Week</button>
+            <button class="hist-tab" type="button">This Month</button>
+            <button class="hist-tab" type="button">All Time</button>
+          </div>
+
+          <div class="hist-filters-right">
+            <button class="hist-select" type="button">
+              All Categories
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <button class="hist-icon-btn" type="button" aria-label="Filter by date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ============ RANKINGS TABLE ============ -->
+        <div class="panel lb-table">
+
+          <div class="lb-row lb-row-head" role="row">
+            <div class="lb-col-rank">Rank</div>
+            <div class="lb-col-player">Player</div>
+            <div class="lb-col-level">Level</div>
+            <div class="lb-col-points">Total Points</div>
+            <div class="lb-col-quizzes">Quizzes</div>
+            <div class="lb-col-winrate">Win Rate</div>
+          </div>
+
+          <div class="lb-row lb-row-top1">
+            <div class="lb-col-rank">
+              <span class="lb-medal lb-medal-gold">1</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">AM</div>
+              <div>
+                <div class="lb-player-name">Aarav Mehta</div>
+                <div class="lb-player-tag">👑 Quiz Master</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                24
+              </span>
+            </div>
+            <div class="lb-col-points">2450</div>
+            <div class="lb-col-quizzes">320</div>
+            <div class="lb-col-winrate">92%</div>
+          </div>
+
+          <div class="lb-row">
+            <div class="lb-col-rank">
+              <span class="lb-medal lb-medal-silver">2</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">DS</div>
+              <div>
+                <div class="lb-player-name">Diya Sharma</div>
+                <div class="lb-player-tag">🏅 Quiz Champion</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                22
+              </span>
+            </div>
+            <div class="lb-col-points">2300</div>
+            <div class="lb-col-quizzes">298</div>
+            <div class="lb-col-winrate">89%</div>
+          </div>
+
+          <div class="lb-row">
+            <div class="lb-col-rank">
+              <span class="lb-medal lb-medal-bronze">3</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">RV</div>
+              <div>
+                <div class="lb-player-name">Rohan Verma</div>
+                <div class="lb-player-tag">🎯 Quiz Pro</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                21
+              </span>
+            </div>
+            <div class="lb-col-points">2150</div>
+            <div class="lb-col-quizzes">275</div>
+            <div class="lb-col-winrate">87%</div>
+          </div>
+
+          <div class="lb-row">
+            <div class="lb-col-rank">
+              <span class="lb-rank-num">4</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">SP</div>
+              <div>
+                <div class="lb-player-name">Sneha Patil</div>
+                <div class="lb-player-tag">⭐ Quiz Expert</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                20
+              </span>
+            </div>
+            <div class="lb-col-points">1980</div>
+            <div class="lb-col-quizzes">250</div>
+            <div class="lb-col-winrate">84%</div>
+          </div>
+
+          <div class="lb-row">
+            <div class="lb-col-rank">
+              <span class="lb-rank-num">5</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">KS</div>
+              <div>
+                <div class="lb-player-name">Karan Singh</div>
+                <div class="lb-player-tag">⭐ Quiz Expert</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                19
+              </span>
+            </div>
+            <div class="lb-col-points">1780</div>
+            <div class="lb-col-quizzes">230</div>
+            <div class="lb-col-winrate">81%</div>
+          </div>
+
+          <div class="lb-row">
+            <div class="lb-col-rank">
+              <span class="lb-rank-num">6</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">AG</div>
+              <div>
+                <div class="lb-player-name">Ananya Gupta</div>
+                <div class="lb-player-tag">🔥 Quiz Enthusiast</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                18
+              </span>
+            </div>
+            <div class="lb-col-points">1620</div>
+            <div class="lb-col-quizzes">210</div>
+            <div class="lb-col-winrate">79%</div>
+          </div>
+
+          <div class="lb-row">
+            <div class="lb-col-rank">
+              <span class="lb-rank-num">7</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">VI</div>
+              <div>
+                <div class="lb-player-name">Vivek Iyer</div>
+                <div class="lb-player-tag">🔥 Quiz Enthusiast</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                17
+              </span>
+            </div>
+            <div class="lb-col-points">1450</div>
+            <div class="lb-col-quizzes">190</div>
+            <div class="lb-col-winrate">77%</div>
+          </div>
+
+          <div class="lb-row lb-row-last">
+            <div class="lb-col-rank">
+              <span class="lb-rank-num">8</span>
+            </div>
+            <div class="lb-col-player">
+              <div class="avatar avatar-fallback lb-avatar">MJ</div>
+              <div>
+                <div class="lb-player-name">Meera Joshi</div>
+                <div class="lb-player-tag">🌱 Rising Star</div>
+              </div>
+            </div>
+            <div class="lb-col-level">
+              <span class="lb-level-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+                16
+              </span>
+            </div>
+            <div class="lb-col-points">1320</div>
+            <div class="lb-col-quizzes">175</div>
+            <div class="lb-col-winrate">73%</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ RIGHT SIDEBAR ============ -->
+      <aside class="hist-side">
+
+        <div class="premium-card panel-gold">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
+          </div>
+          <div>
+            <div class="premium-title">Upgrade to Premium</div>
+            <div class="premium-sub">Unlock exclusive leaderboards, advanced stats and more.</div>
+          </div>
+          <a href="#" class="premium-arrow" aria-label="Upgrade">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- ============ YOUR RANK ============ -->
+        <div class="panel hist-panel">
+          <h3 class="hist-panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+            Your Rank
+          </h3>
+
+          <div class="lb-yourrank-grid">
+            <div class="lb-yourrank-cell">
+              <span class="lb-medal lb-medal-you">12</span>
+              <div>
+                <div class="lb-yourrank-num">/ 1,245</div>
+              </div>
+            </div>
+            <div class="lb-yourrank-cell">
+              <div>
+                <div class="lb-yourrank-num">1,250</div>
+                <div class="hist-overview-label">Total Points</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lb-yourrank-grid lb-yourrank-grid--stats">
+            <div class="lb-yourrank-cell">
+              <div class="icon-circle icon-circle-sm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              </div>
+              <div>
+                <div class="lb-yourrank-num">18</div>
+                <div class="hist-overview-label">Level</div>
+              </div>
+            </div>
+            <div class="lb-yourrank-cell">
+              <div>
+                <div class="lb-yourrank-num lb-yourrank-num--win">76%
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+                </div>
+                <div class="hist-overview-label">Win Rate</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lb-yourrank-progress">
+            <div class="progress-track">
+              <div class="progress-fill" style="width:82%;"></div>
+            </div>
+          </div>
+          <p class="lb-yourrank-note">Keep going! You're in the top 1% 🔥</p>
+        </div>
+
+        <!-- ============ TOP PERFORMERS ============ -->
+        <div class="panel hist-panel">
+          <div class="hist-panel-header-row">
+            <h3 class="hist-panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
+              Top Performers
+            </h3>
+            <a href="#" class="hist-view-all">View All</a>
+          </div>
+
+          <ul class="lb-top-list">
+            <li class="lb-top-item">
+              <span class="lb-medal lb-medal-gold lb-medal-sm">1</span>
+              <div class="avatar avatar-fallback lb-avatar-sm">AM</div>
+              <div class="lb-top-name">Aarav Mehta</div>
+              <div class="lb-top-pts">2450</div>
+            </li>
+            <li class="lb-top-item">
+              <span class="lb-medal lb-medal-silver lb-medal-sm">2</span>
+              <div class="avatar avatar-fallback lb-avatar-sm">DS</div>
+              <div class="lb-top-name">Diya Sharma</div>
+              <div class="lb-top-pts">2300</div>
+            </li>
+            <li class="lb-top-item">
+              <span class="lb-medal lb-medal-bronze lb-medal-sm">3</span>
+              <div class="avatar avatar-fallback lb-avatar-sm">RV</div>
+              <div class="lb-top-name">Rohan Verma</div>
+              <div class="lb-top-pts">2150</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ============ INFO PANEL ============ -->
+        <div class="panel hist-panel">
+          <h3 class="hist-panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg>
+            Leaderboard Info
+          </h3>
+          <p class="lb-info-text">The leaderboard ranks players based on total points earned from completed quizzes. More accurate answers, higher your score!</p>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- ============ SHARE / MOTIVATIONAL BAR ============ -->
+    <section class="panel hist-motivate-bar lb-share-bar">
+      <div class="icon-circle icon-circle-md">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      </div>
+      <div class="lb-share-text">
+        <div class="hist-motivate-title">Compete, improve, and become the ultimate Quiz Master! 🏆</div>
+      </div>
+      <button class="btn btn-secondary lb-share-btn" type="button">
+        Share Leaderboard
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="m8.3 10.6 7.4-4.2M8.3 13.4l7.4 4.2"/></svg>
+      </button>
+    </section>
+
+  </main>
+
+</body>
+</html>
