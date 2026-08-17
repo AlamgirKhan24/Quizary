@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizary — Settings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sidebar.css">
+<link rel="stylesheet" href="assets/css/topbar.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/setting.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <nav class="sidebar" aria-label="Primary">
+    <div class="sb-logo">Q</div>
+
+    <a href="index.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
+      <span class="sb-tooltip">Home</span>
+    </a>
+
+    <a href="categories.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+      <span class="sb-tooltip">Categories</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg>
+      <span class="sb-tooltip">Help</span>
+    </a>
+
+    <a href="history.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
+      <span class="sb-tooltip">History</span>
+    </a>
+
+    <a href="leaderboard.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      <span class="sb-tooltip">Leaderboard</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+      <span class="sb-tooltip">Stats</span>
+    </a>
+
+    <a href="settings.html" class="sb-icon active" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.6V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.6 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1Z"/></svg>
+      <span class="sb-tooltip">Settings</span>
+    </a>
+
+    <a href="#" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="5" height="6" rx="1.5"/><rect x="16.5" y="13" width="5" height="6" rx="1.5"/><path d="M19.5 19v.5a3 3 0 0 1-3 3h-2.3"/></svg>
+      <span class="sb-tooltip">Support</span>
+    </a>
+
+    <div class="sb-spacer"></div>
+
+    <a href="login.html" class="sb-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 16l4-4-4-4"/><path d="M19 12H9"/></svg>
+      <span class="sb-tooltip">Log out</span>
+    </a>
+  </nav>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-col">
+
+    <header class="top-bar panel">
+      <div class="welcome">Welcome back, <b>Pranav</b> 👋</div>
+
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input type="text" id="set-search" placeholder="Search settings...">
+      </label>
+
+      <div class="profile-wrap">
+        <button class="profile" aria-expanded="false" aria-haspopup="true">
+          <div class="avatar avatar-fallback">PK</div>
+          <div>
+            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-level">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
+              Level 12
+            </div>
+          </div>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="profile-menu">
+          <a href="profile.html">My Profile</a>
+          <a href="#">Achievements</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html">Log out</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="set-header-text">
+      <h1 class="set-title">Settings</h1>
+      <p class="set-subtitle">Manage your preferences, account, and app settings.</p>
+    </section>
+
+    <!-- ============ CATEGORY TABS ============ -->
+    <nav class="set-tabs" aria-label="Settings categories">
+      <button class="set-tab set-tab-active" type="button" role="tab" aria-selected="true">General</button>
+      <button class="set-tab" type="button" role="tab" aria-selected="false">Account</button>
+      <button class="set-tab" type="button" role="tab" aria-selected="false">Notifications</button>
+      <button class="set-tab" type="button" role="tab" aria-selected="false">Privacy</button>
+      <button class="set-tab" type="button" role="tab" aria-selected="false">Appearance</button>
+      <button class="set-tab" type="button" role="tab" aria-selected="false">Security</button>
+    </nav>
+
+    <!-- ============ BODY ============ -->
+    <div class="set-body">
+
+      <!-- ============ MAIN COLUMN ============ -->
+      <section class="set-main panel">
+
+        <!-- Profile Information -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Profile Information</div>
+            <div class="set-row-sub">Update your name, avatar, and personal details.</div>
+          </div>
+          <div class="set-row-action">
+            <a href="profile.html" class="set-row-btn">
+              Edit Profile
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Notifications</div>
+            <div class="set-row-sub">Manage how and when you receive notifications.</div>
+          </div>
+          <div class="set-row-action">
+            <button class="set-chevron" type="button" aria-label="Open notification settings">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Appearance -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a6 6 0 0 0 0 12 3 3 0 0 1 0 6 9 9 0 1 1 0-18Z"/><circle cx="8.5" cy="10.5" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="15.5" cy="10.5" r="1"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Appearance</div>
+            <div class="set-row-sub">Customize the look and feel of the app.</div>
+          </div>
+          <div class="set-row-action">
+            <div class="set-segment" role="radiogroup" aria-label="Theme">
+              <button class="set-segment-btn" type="button" role="radio" aria-checked="false">Light</button>
+              <button class="set-segment-btn set-segment-btn-active" type="button" role="radio" aria-checked="true">Dark</button>
+              <button class="set-segment-btn" type="button" role="radio" aria-checked="false">System</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Language -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Language</div>
+            <div class="set-row-sub">Choose your preferred language.</div>
+          </div>
+          <div class="set-row-action set-dropdown-wrap">
+            <button class="set-select" type="button" id="lang-select" aria-haspopup="listbox" aria-expanded="false">
+              <span id="lang-select-label">English</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="set-dropdown-menu" id="lang-menu" role="listbox" aria-label="Language">
+              <li role="option" data-value="English">English</li>
+              <li role="option" data-value="Hindi">Hindi</li>
+              <li role="option" data-value="Spanish">Spanish</li>
+              <li role="option" data-value="French">French</li>
+              <li role="option" data-value="German">German</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Default Quiz Settings -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.6" fill="currentColor"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Default Quiz Settings</div>
+            <div class="set-row-sub">Set your default quiz preferences.</div>
+          </div>
+          <div class="set-row-action">
+            <button class="set-chevron" type="button" aria-label="Open default quiz settings">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Data & Storage -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5V12c0 1.7 3.6 3 8 3s8-1.3 8-3V5.5"/><path d="M4 12v6.5c0 1.7 3.6 3 8 3s8-1.3 8-3V12"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Data &amp; Storage</div>
+            <div class="set-row-sub">Manage your data, export or delete your information.</div>
+          </div>
+          <div class="set-row-action">
+            <button class="set-chevron" type="button" aria-label="Open data and storage settings">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Need Help -->
+        <div class="set-row">
+          <div class="icon-circle set-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4.9 1 .9 1.7V16h5.2v-.4c0-.7.3-1.3.9-1.7A6 6 0 0 0 12 3Z"/></svg>
+          </div>
+          <div class="set-row-text">
+            <div class="set-row-title">Need Help?</div>
+            <div class="set-row-sub">Check out our Help Center or contact our support team.</div>
+          </div>
+          <div class="set-row-action">
+            <a href="#" class="set-row-btn">
+              Visit Help Center
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============ SIDE COLUMN ============ -->
+      <aside class="set-side">
+
+        <!-- Upgrade to Premium -->
+        <div class="premium-card panel panel-gold">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 8 4 3 5.5-6 5.5 6 4-3-2 11h-15L2.5 8Z"/></svg>
+          </div>
+          <div>
+            <div class="premium-title">Upgrade to Premium</div>
+            <div class="premium-sub">Unlock exclusive features and take your learning to the next level.</div>
+          </div>
+          <div class="premium-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </div>
+        </div>
+
+        <!-- Your Account -->
+        <div class="panel">
+          <div class="set-card-title">Your Account</div>
+          <div class="set-info-list">
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></div>
+              <div class="set-info-label">Username</div>
+              <div class="set-info-value">pranav_quizmaster</div>
+            </div>
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+              <div class="set-info-label">Email</div>
+              <div class="set-info-value">pranav@example.com</div>
+            </div>
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg></div>
+              <div class="set-info-label">Member Since</div>
+              <div class="set-info-value">12 May 2025</div>
+            </div>
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg></div>
+              <div class="set-info-label">Account Type</div>
+              <div class="set-info-value">Free Plan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sync Across Devices -->
+        <div class="set-sync-card panel">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.4-1.5A4.5 4.5 0 0 0 6.5 19h11Z"/></svg>
+          </div>
+          <div class="set-sync-text">
+            <div class="set-sync-title">Sync Across Devices</div>
+            <div class="set-sync-sub">Keep your progress, history, and settings in sync across all devices.</div>
+          </div>
+          <label class="set-toggle">
+            <input type="checkbox" checked aria-label="Sync across devices">
+            <span class="set-toggle-track"></span>
+            <span class="set-toggle-thumb"></span>
+          </label>
+        </div>
+
+        <!-- App Information -->
+        <div class="panel">
+          <div class="set-card-title">App Information</div>
+          <div class="set-info-list">
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/></svg></div>
+              <div class="set-info-label">Version</div>
+              <div class="set-info-value">1.0.0</div>
+            </div>
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></div>
+              <div class="set-info-label">Last Updated</div>
+              <div class="set-info-value">10 May 2025</div>
+            </div>
+            <div class="set-info-row">
+              <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 14h.01"/></svg></div>
+              <div class="set-info-label">Developer</div>
+              <div class="set-info-value">QuizMaster Team</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Danger Zone -->
+        <div class="panel set-danger-card">
+          <div class="set-danger-title">Danger Zone</div>
+          <div class="set-danger-row">
+            <div class="set-danger-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M6 7v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7"/><path d="M9 7V4.5A1.5 1.5 0 0 1 10.5 3h3A1.5 1.5 0 0 1 15 4.5V7"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+            </div>
+            <div class="set-danger-text">
+              <div class="set-danger-row-title">Delete Account</div>
+              <div class="set-danger-row-sub">This action cannot be undone.</div>
+            </div>
+            <button class="set-chevron set-danger-chevron" type="button" aria-label="Open delete account">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <script src="assets/js/sidebar.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/setting.js"></script>
+</body>
+</html>

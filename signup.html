@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quizary — Sign Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/login.css">
+<link rel="stylesheet" href="assets/css/signup.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-shell panel">
+
+    <!-- ================= LEFT — BRAND PANEL ================= -->
+    <div class="auth-brand">
+
+      <div class="auth-brand-top">
+        <div class="auth-logo-mark">Q</div>
+        <span class="auth-logo-word">QuizMaster</span>
+      </div>
+
+      <h1 class="auth-tagline">
+        Challenge.<br>
+        Learn.<br>
+        <span class="accent">Grow.</span>
+      </h1>
+
+      <p class="auth-subtext">Join millions of learners and test your knowledge in a fun and interactive way.</p>
+
+      <!-- decorative floating chips, echoes the sidebar/quiz icon language -->
+      <div class="auth-float auth-float-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 9.2a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2-2.4 3.6"/><path d="M12 17.2v.1"/><circle cx="12" cy="12" r="9"/></svg>
+      </div>
+      <div class="auth-float auth-float-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4.5a1 1 0 0 0-1 1.3l.6 1.6A3 3 0 0 0 7 11"/><path d="M17 6h2.5a1 1 0 0 1 1 1.3l-.6 1.6A3 3 0 0 1 17 11"/><path d="M12 14v3"/><path d="M8.5 20.5h7l-1-2.5h-5l-1 2.5Z"/></svg>
+      </div>
+      <div class="auth-float auth-float-3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10.5a2 2 0 0 1 .9-1.7L12 4l7.1 4.8a2 2 0 0 1 .9 1.7V19"/><path d="M8.5 19v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6"/></svg>
+      </div>
+
+      <blockquote class="auth-quote panel">
+        <span class="auth-quote-mark">&ldquo;</span>
+        <p>The beautiful thing about learning is that no one can take it away from you.</p>
+        — B.B. King
+      </blockquote>
+    </div>
+
+    <!-- ================= RIGHT — SIGN UP FORM ================= -->
+    <div class="auth-form-col">
+
+      <div class="auth-form-top">
+        <span>Already have an account?</span>
+        <a href="login.html" class="auth-switch-link">Sign In</a>
+      </div>
+
+      <form class="auth-form" novalidate>
+
+        <div class="auth-form-head">
+          <div class="icon-circle icon-circle-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 20c0-4 3.1-7 7-7s7 3 7 7"/><path d="M19 8v6"/><path d="M16 11h6"/></svg>
+          </div>
+          <div>
+            <h2 class="auth-form-title">Create your account</h2>
+            <p class="auth-form-sub">Start your quiz journey with QuizMaster <span aria-hidden="true">✨</span></p>
+          </div>
+        </div>
+
+        <label class="auth-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+          <input type="text" name="fullname" placeholder="Full Name" autocomplete="name" required>
+        </label>
+
+        <label class="auth-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.2"/><path d="m4 7 8 6 8-6"/></svg>
+          <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+        </label>
+
+        <label class="auth-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+          <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+          <button type="button" class="auth-field-toggle" aria-label="Show password">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </label>
+
+        <label class="auth-field">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+          <input type="password" name="confirm_password" placeholder="Confirm Password" autocomplete="new-password" required>
+          <button type="button" class="auth-field-toggle" aria-label="Show password">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block auth-submit">
+          Sign Up
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </button>
+
+        <div class="auth-divider"><span>or sign up with</span></div>
+
+        <div class="auth-social-row">
+          <button type="button" class="auth-social-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#EA4335" d="M12 10.2v3.9h5.5c-.24 1.36-1.7 4-5.5 4-3.31 0-6-2.73-6-6.1s2.69-6.1 6-6.1c1.88 0 3.14.8 3.86 1.49l2.63-2.53C16.86 3.14 14.66 2.1 12 2.1 6.98 2.1 2.9 6.14 2.9 11.1s4.08 9 9.1 9c5.25 0 8.73-3.69 8.73-8.89 0-.6-.07-1.05-.15-1.51H12Z"/></svg>
+            Google
+          </button>
+          <button type="button" class="auth-social-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.4 2.6c0 1-.4 1.9-1 2.6-.7.8-1.8 1.4-2.8 1.3-.1-1 .4-2 1-2.6.7-.8 1.9-1.4 2.8-1.3Zm2.9 16c-.5 1.2-.8 1.7-1.5 2.7-1 1.4-2.3 3.2-4 3.2-1.5 0-1.9-1-3.9-1-2 0-2.5 1-4 1-1.7 0-3-1.6-4-3-2.7-3.9-3-8.5-1.3-11 1.2-1.8 3-2.8 4.7-2.8 1.7 0 2.8 1 4.2 1 1.4 0 2.2-1 4.2-1 1.5 0 3.1.8 4.2 2.2-3.7 2-3.1 7.3.4 8.7Z"/></svg>
+            Apple
+          </button>
+          <button type="button" class="auth-social-btn">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#1877F2" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.5-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.78 8.44-4.94 8.44-9.94Z"/></svg>
+            Facebook
+          </button>
+        </div>
+
+        <p class="auth-terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+
+      </form>
+    </div>
+
+  </div>
+
+  <script src="assets/js/signup.js"></script>
+
+</body>
+</html>
