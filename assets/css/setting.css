@@ -509,3 +509,96 @@
     font-size:30px;
   }
 }
+/* ================= RESPONSIVE — ADD-ON (640 / 480) ================= */
+
+@media (max-width: 640px){
+  /* Sidebar/topbar switch to mobile layout at 640px — body must stack
+     too, or main-col gets squeezed beside the horizontal sidebar rail. */
+  body{
+    flex-direction:column;
+  }
+
+  .main-col{
+    gap:14px;
+  }
+
+  .set-main{
+    padding:0;
+  }
+
+  .set-row{
+    padding:16px;
+    gap:14px;
+  }
+
+  .set-row-icon{
+    width:42px;
+    height:42px;
+  }
+
+  .set-segment-btn{
+    padding:7px 12px;
+    font-size:12px;
+  }
+
+  .set-select{
+    padding:9px 12px;
+    font-size:12.5px;
+  }
+
+  .set-info-value{
+    max-width:110px;
+  }
+
+  .set-sync-card,
+  .set-danger-row{
+    padding:16px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .set-title{
+    font-size:26px;
+  }
+
+  .set-tabs{
+    gap:6px;
+  }
+
+  .set-tab{
+    padding:8px 14px;
+    font-size:12px;
+  }
+
+  .set-row-action{
+    padding-left:0; /* icon + text already wrapped full-width above it */
+  }
+
+  .set-segment{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .set-segment-btn{
+    flex:1;
+    text-align:center;
+  }
+
+  .set-dropdown-menu{
+    left:0;
+    right:0;
+    min-width:0;
+  }
+
+  .set-info-row{
+    flex-wrap:wrap;
+  }
+
+  .set-info-value{
+    max-width:none;
+    text-align:left;
+    width:100%;
+    padding-left:46px;
+  }
+}

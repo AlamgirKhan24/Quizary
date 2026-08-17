@@ -543,3 +543,102 @@
     justify-content:center;
   }
 }
+/* ================= RESPONSIVE — ADD-ON (640 / 480) ================= */
+
+@media (max-width: 640px){
+  /* Sidebar/topbar switch to mobile layout at 640px — body must stack
+     too, or main-col gets squeezed beside the horizontal sidebar rail. */
+  body{
+    flex-direction:column;
+  }
+
+  .main-col{
+    gap:14px;
+  }
+
+  .hist-title{
+    font-size:28px;
+  }
+
+  .hist-filters{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hist-filters-right{
+    justify-content:space-between;
+  }
+
+  .hist-select{
+    flex:1;
+    justify-content:space-between;
+  }
+
+  .lb-table{
+    padding:6px 14px;
+  }
+
+  .lb-row{
+    padding:12px 2px;
+    gap:10px;
+  }
+
+  .lb-player-name{
+    font-size:13px;
+  }
+
+  .lb-player-tag{
+    font-size:11px;
+  }
+
+  .hist-panel{
+    padding:16px;
+  }
+
+  .lb-yourrank-num{
+    font-size:17px;
+  }
+
+  .hist-motivate-bar{
+    padding:16px 18px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .lb-row{
+    grid-template-columns:36px minmax(0,1fr) 60px;
+    gap:8px;
+  }
+
+  .lb-avatar{
+    width:32px;
+    height:32px;
+  }
+
+  .lb-medal,
+  .lb-rank-num{
+    width:28px;
+    height:28px;
+    font-size:12.5px;
+  }
+
+  .lb-level-badge{
+    padding:4px 9px;
+    font-size:11px;
+  }
+
+  .lb-level-badge span{
+    display:none; /* keep just the icon on tiny screens if you add a text span later */
+  }
+
+  .lb-yourrank-grid,
+  .lb-yourrank-grid--stats{
+    grid-template-columns:1fr;
+  }
+
+  .hist-motivate-bar.lb-share-bar{
+    flex-direction:column;
+    text-align:center;
+  }
+}

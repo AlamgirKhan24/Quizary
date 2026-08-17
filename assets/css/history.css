@@ -510,3 +510,102 @@
     text-align:left;
   }
 }
+
+/* ================= RESPONSIVE — ADD-ON (640 / 480) ================= */
+
+@media (max-width: 640px){
+  /* Sidebar/topbar switch to mobile layout at 640px — body must stack
+     too, or main-col gets squeezed beside the horizontal sidebar rail. */
+  body{
+    flex-direction:column;
+  }
+
+  .main-col{
+    gap:14px;
+  }
+
+  .hist-title{
+    font-size:28px;
+  }
+
+  .hist-filters{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hist-filters-right{
+    justify-content:space-between;
+  }
+
+  .hist-select{
+    flex:1;
+    justify-content:space-between;
+  }
+
+  .hist-row{
+    padding:14px;
+    gap:12px;
+  }
+
+  .hist-row-info{
+    min-width:120px;
+  }
+
+  .hist-panel{
+    padding:16px;
+  }
+
+  .hist-overview-grid{
+    gap:12px 10px;
+  }
+
+  .hist-overview-num{
+    font-size:19px;
+  }
+
+  .hist-motivate-bar{
+    padding:16px 18px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .hist-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .hist-row-when{
+    order:2;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .hist-row-result{
+    order:3;
+    text-align:left;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .hist-chevron{
+    order:4;
+    align-self:flex-end;
+    margin-top:-30px;
+  }
+
+  .hist-overview-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hist-chart-labels{
+    padding-left:0;
+    font-size:9.5px;
+  }
+
+  .hist-motivate-bar{
+    flex-direction:column;
+    text-align:center;
+  }
+}

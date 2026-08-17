@@ -399,3 +399,125 @@
     font-size:32px;
   }
 }
+
+/* ================= RESPONSIVE — ADD-ON (640 / 480) ================= */
+
+/* Sidebar + topbar switch to mobile layout at 640px (see sidebar.css /
+   topbar.css) — body needs to stack too, or main-col gets squeezed
+   beside the now-horizontal sidebar rail. */
+@media (max-width: 640px){
+  body{
+    flex-direction:column;
+  }
+
+  .main-col{
+    gap:14px;
+  }
+
+  .hero-row{
+    gap:14px;
+  }
+
+  .hero-card{
+    padding:24px 18px;
+  }
+
+  .hero-title{
+    font-size:26px;
+  }
+
+  .hero-role{
+    font-size:14px;
+  }
+
+  .hero-desc{
+    font-size:13px;
+    margin-bottom:18px;
+  }
+
+  .hero-actions{
+    width:100%;
+  }
+
+  .hero-actions .btn{
+    flex:1;
+    justify-content:center;
+  }
+
+  .hero-visual{
+    width:150px;
+  }
+
+  .hero-illustration{
+    width:100%;
+    height:auto;
+  }
+
+  .chip{
+    transform:scale(0.85);
+  }
+
+  .premium-card{
+    padding:16px;
+  }
+
+  .premium-title{
+    font-size:13.5px;
+  }
+
+  .premium-sub{
+    font-size:12px;
+  }
+
+  .stat-list{
+    padding:16px;
+  }
+
+  .stat-row-num{
+    font-size:15px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .bottom-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-header{
+    font-size:15px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .hero-visual{
+    display:none; /* illustration takes too much vertical space on small phones */
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .social-row{
+    flex-wrap:wrap;
+  }
+
+  .hero-side{
+    flex-direction:column;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .profile-name,
+  .profile-level{
+    display:none; /* keep just the avatar + chevron in the topbar on very small screens */
+  }
+
+  .profile{
+    padding:6px;
+  }
+}

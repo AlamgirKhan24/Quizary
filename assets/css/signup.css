@@ -332,3 +332,54 @@
     padding:36px 28px;
   }
 }
+/* ================= RESPONSIVE — ADD-ON (480) ================= */
+@media (max-width: 480px){
+  .auth-body{
+    padding:0;
+  }
+
+  .auth-shell{
+    max-width:100%;
+    min-height:100vh;
+    border-radius:0;
+  }
+
+  .auth-form-col{
+    padding:28px 20px;
+  }
+
+  .auth-form{
+    gap:12px;
+  }
+
+  .auth-form-title{
+    font-size:20px;
+  }
+
+  .auth-form-sub{
+    font-size:12px;
+  }
+
+  .auth-field{
+    height:46px;
+    padding:0 14px;
+  }
+
+  .auth-submit{
+    height:48px;
+  }
+
+  .auth-social-row{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .auth-social-btn{
+    justify-content:flex-start;
+    padding-left:16px;
+  }
+
+  .auth-terms{
+    font-size:11px;
+  }
+}

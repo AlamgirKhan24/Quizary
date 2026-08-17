@@ -269,3 +269,90 @@
     justify-content:center;
   }
 }
+
+/* ================= RESPONSIVE — ADD-ON (640 / 480) ================= */
+
+@media (max-width: 640px){
+  /* Sidebar/topbar switch to mobile layout at 640px — body must stack
+     too, or main-col gets squeezed beside the horizontal sidebar rail. */
+  body{
+    flex-direction:column;
+  }
+
+  .main-col{
+    gap:14px;
+  }
+
+  .cat-subtitle{
+    font-size:13px;
+  }
+
+  .cat-premium{
+    min-width:0;
+    padding:14px 40px 14px 14px;
+  }
+
+  .cat-stats-row{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .cat-stat-card{
+    padding:16px;
+    gap:10px;
+  }
+
+  .cat-stat-num{
+    font-size:20px;
+  }
+
+  .cat-grid{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .cat-card{
+    padding:16px;
+  }
+
+  .icon-circle-lg{
+    width:46px;
+    height:46px;
+    margin-bottom:12px;
+  }
+
+  .cat-card-title{
+    font-size:14.5px;
+  }
+
+  .cat-request-bar{
+    padding:18px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .cat-stats-row{
+    grid-template-columns:1fr;
+  }
+
+  .cat-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cat-title{
+    font-size:26px;
+  }
+
+  .cat-premium{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:16px;
+  }
+
+  .cat-premium .premium-arrow{
+    position:static;
+    transform:none;
+    margin-top:8px;
+  }
+}

@@ -584,3 +584,113 @@
     flex-direction:column;
   }
 }
+/* ================= RESPONSIVE — ADD-ON (640 / 480) ================= */
+
+@media (max-width: 640px){
+  /* Sidebar/topbar switch to mobile layout at 640px — body must stack
+     too, or main-col gets squeezed beside the horizontal sidebar rail. */
+  body{
+    flex-direction:column;
+  }
+
+  .main-col{
+    gap:14px;
+  }
+
+  .quiz-top-row{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .quiz-title{
+    font-size:24px;
+  }
+
+  .quiz-header-row{
+    gap:12px;
+  }
+
+  .quiz-points-badge{
+    padding:10px 16px;
+  }
+
+  .quiz-card{
+    padding:20px;
+    gap:18px;
+  }
+
+  .quiz-question{
+    font-size:18px;
+    margin-bottom:18px;
+  }
+
+  .quiz-option{
+    padding:12px 14px;
+    font-size:13px;
+  }
+
+  .quiz-fact-card,
+  .quiz-leaderboard-card{
+    min-width:100%;
+    padding:16px 18px;
+  }
+
+  .quiz-side-panel{
+    padding:14px 16px;
+  }
+
+  .quiz-nav-grid{
+    gap:8px;
+  }
+
+  .qnav-legend{
+    flex-wrap:wrap;
+    gap:8px 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  .quiz-top-row{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .quiz-profile-wrap{
+    align-self:stretch;
+  }
+
+  .quiz-profile-wrap .profile{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .quiz-header-row{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .quiz-points-badge{
+    justify-content:center;
+  }
+
+  .quiz-option-text{
+    font-size:12.5px;
+  }
+
+  .quiz-card-visual{
+    height:150px;
+  }
+
+  .quiz-mascot{
+    width:140px;
+  }
+
+  .quiz-timer-row{
+    justify-content:center;
+  }
+
+  .quiz-nav-grid{
+    grid-template-columns:repeat(5, 1fr);
+  }
+}
