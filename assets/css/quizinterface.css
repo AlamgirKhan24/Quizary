@@ -141,7 +141,14 @@
 }
 
 .qz-icon{
+  width:64px;
+  height:64px;
   flex-shrink:0;
+}
+
+.qz-icon svg{
+  width:28px;
+  height:28px;
 }
 
 .qz-item-text{
