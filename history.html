@@ -20,7 +20,7 @@
   <nav class="sidebar" aria-label="Primary">
     <div class="sb-logo">Q</div>
 
-    <a href="index.html" class="sb-icon active" aria-current="page">
+    <a href="index.html" class="sb-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
       <span class="sb-tooltip">Home</span>
     </a>
@@ -35,7 +35,7 @@
       <span class="sb-tooltip">Quiz</span>
     </a>
 
-    <a href="history.html" class="sb-icon">
+    <a href="history.html" class="sb-icon active" aria-current="page">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
       <span class="sb-tooltip">History</span>
     </a>
@@ -89,9 +89,9 @@
 
       <div class="profile-wrap">
         <button class="profile" aria-expanded="false" aria-haspopup="true">
-          <div class="avatar avatar-fallback">PK</div>
+          <div class="avatar avatar-fallback">AK</div>
           <div>
-            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-name">Ali Khan</div>
             <div class="profile-level">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
               Level 12
@@ -110,8 +110,19 @@
 
     <!-- ============ PAGE HEADER ============ -->
     <section class="hist-header-text">
-      <h1 class="hist-title">History</h1>
-      <p class="hist-subtitle">Track your quiz activity and performance over time.</p>
+      <div class="hist-eyebrow"><span></span> Your learning record</div>
+      <div class="hist-heading-row">
+        <div>
+          <h1 class="hist-title">Every challenge tells a <em>story.</em></h1>
+          <p class="hist-subtitle">Review your momentum, celebrate your wins, and see exactly where to grow next.</p>
+        </div>
+        <div class="hist-header-score"><span>✦</span><strong>68%</strong><small>average score</small></div>
+      </div>
+      <div class="hist-header-metrics">
+        <div><strong>28</strong><span>quizzes attempted</span></div>
+        <div><strong>20</strong><span>challenges completed</span></div>
+        <div><strong>2,450</strong><span>XP earned</span></div>
+      </div>
     </section>
 
     <!-- ============ BODY: LIST + SIDE ============ -->
@@ -122,18 +133,27 @@
 
         <!-- Filters -->
         <div class="hist-filters">
-          <div class="hist-tabs">
-            <button class="hist-tab hist-tab-active" type="button">All</button>
-            <button class="hist-tab" type="button">Completed</button>
-            <button class="hist-tab" type="button">In Progress</button>
-            <button class="hist-tab" type="button">Bookmarked</button>
+          <div class="hist-tabs" role="tablist" aria-label="History status">
+            <button class="hist-tab hist-tab-active" type="button" data-filter="all" role="tab" aria-selected="true">All activity</button>
+            <button class="hist-tab" type="button" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+            <button class="hist-tab" type="button" data-filter="progress" role="tab" aria-selected="false">In Progress</button>
+            <button class="hist-tab" type="button" data-filter="bookmarked" role="tab" aria-selected="false">Bookmarked</button>
           </div>
 
           <div class="hist-filters-right">
-            <button class="hist-select" type="button">
-              All Categories
+            <label class="hist-select">
+              <span class="sr-only">Filter history by category</span>
+              <select id="historyCategory" aria-label="Filter history by category">
+                <option value="all">All Categories</option>
+                <option value="geography">Geography</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="technology">Technology</option>
+                <option value="general">General Knowledge</option>
+                <option value="sports">Sports</option>
+              </select>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
+            </label>
             <button class="hist-icon-btn" type="button" aria-label="Filter by date">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3.5M16 3v3.5"/></svg>
             </button>
@@ -143,7 +163,7 @@
         <!-- History rows -->
         <div class="hist-list">
 
-          <a href="quiz.html?subject=geography" class="panel hist-row">
+          <a href="quiz.html?subject=geography" class="panel hist-row" data-status="completed bookmarked" data-category="geography" data-name="geography countries capitals">
             <div class="icon-circle icon-circle-md">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a13 13 0 0 0 0 18 13 13 0 0 0 0-18Z"/><path d="M3.5 9h17M3.5 15h17"/></svg>
             </div>
@@ -171,7 +191,7 @@
             </span>
           </a>
 
-          <a href="quiz.html?subject=science" class="panel hist-row">
+          <a href="quiz.html?subject=science" class="panel hist-row" data-status="completed" data-category="science" data-name="science nature">
             <div class="icon-circle icon-circle-md">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg>
             </div>
@@ -199,7 +219,7 @@
             </span>
           </a>
 
-          <a href="quiz.html?subject=history" class="panel hist-row">
+          <a href="quiz.html?subject=history" class="panel hist-row" data-status="completed bookmarked" data-category="history" data-name="history culture past">
             <div class="icon-circle icon-circle-md">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10.5l8-4 8 4V21"/><path d="M4 21h16"/><path d="M8 21v-6h3v6M13 21v-6h3v6"/><path d="M12 6.5V4"/></svg>
             </div>
@@ -227,7 +247,7 @@
             </span>
           </a>
 
-          <a href="quiz.html?subject=technology" class="panel hist-row">
+          <a href="quiz.html?subject=technology" class="panel hist-row" data-status="progress" data-category="technology" data-name="technology tech innovation">
             <div class="icon-circle icon-circle-md">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="11" rx="1.5"/><path d="M2.5 19.5h19"/><path d="M9.5 19.5 10 16h4l.5 3.5"/></svg>
             </div>
@@ -255,7 +275,7 @@
             </span>
           </a>
 
-          <a href="quiz.html?subject=general-knowledge" class="panel hist-row">
+          <a href="quiz.html?subject=general-knowledge" class="panel hist-row" data-status="completed bookmarked" data-category="general" data-name="general knowledge mixed topics">
             <div class="icon-circle icon-circle-md">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5A2.5 2.5 0 0 0 7 7v.3A2.5 2.5 0 0 0 5.5 12 2.5 2.5 0 0 0 7 16.5V17a2.5 2.5 0 0 0 5 0V7a2.5 2.5 0 0 0-2.5-2.5Z"/><path d="M14.5 4.5A2.5 2.5 0 0 1 17 7v.3a2.5 2.5 0 0 1 1.5 4.7A2.5 2.5 0 0 1 17 16.5V17a2.5 2.5 0 0 1-5 0V7a2.5 2.5 0 0 1 2.5-2.5Z"/></svg>
             </div>
@@ -283,7 +303,7 @@
             </span>
           </a>
 
-          <a href="quiz.html?subject=sports" class="panel hist-row">
+          <a href="quiz.html?subject=sports" class="panel hist-row" data-status="completed" data-category="sports" data-name="sports games">
             <div class="icon-circle icon-circle-md">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="m12 3.5 1.6 4.6M12 20.5l-1.6-4.6M3.5 12l4.6-1.6M20.5 12l-4.6 1.6M6 6l3.5 2.5M18 6l-3.5 2.5M6 18l3.5-2.5M18 18l-3.5-2.5"/></svg>
             </div>
@@ -312,6 +332,7 @@
           </a>
 
         </div>
+        <div class="hist-empty panel" hidden><span>⌕</span><h3>No activity found</h3><p>Try a different topic, status, or search to rediscover your quiz history.</p><button class="hist-reset" type="button">Clear filters</button></div>
       </div>
 
       <!-- ============ RIGHT SIDEBAR ============ -->
@@ -446,7 +467,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6.5 6.5 0 0 0-3.7 11.8c.6.4 1 1.1 1 1.9v.3h5.4v-.3c0-.8.4-1.5 1-1.9A6.5 6.5 0 0 0 12 3Z"/></svg>
       </div>
       <div>
-        <div class="hist-motivate-title">Keep going, Pranav! Consistency is the key to success.</div>
+        <div class="hist-motivate-title">Keep going, Ali! Consistency is the key to success.</div>
         <div class="hist-motivate-sub">You've got this! 🚀</div>
       </div>
     </section>
@@ -455,6 +476,7 @@
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/topbar.js"></script>
+    <script src="assets/js/history.js"></script>
 
 </body>
 </html>

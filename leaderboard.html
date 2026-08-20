@@ -20,7 +20,7 @@
   <nav class="sidebar" aria-label="Primary">
     <div class="sb-logo">Q</div>
 
-    <a href="index.html" class="sb-icon active" aria-current="page">
+    <a href="index.html" class="sb-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
       <span class="sb-tooltip">Home</span>
     </a>
@@ -45,7 +45,7 @@
       <span class="sb-tooltip">Result</span>
     </a>
 
-    <a href="leaderboard.html" class="sb-icon">
+    <a href="leaderboard.html" class="sb-icon active" aria-current="page">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V13"/><path d="M12 20V6"/><path d="M19 20v-9"/></svg>
       <span class="sb-tooltip">Leaderboard</span>
     </a>
@@ -89,9 +89,9 @@
 
       <div class="profile-wrap">
         <button class="profile" aria-expanded="false" aria-haspopup="true">
-          <div class="avatar avatar-fallback">PK</div>
+          <div class="avatar avatar-fallback">AK</div>
           <div>
-            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-name">Ali Khan</div>
             <div class="profile-level">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
               Level 12
@@ -109,9 +109,16 @@
     </header>
 
     <!-- ============ PAGE HEADER ============ -->
-    <section class="hist-header-text">
-      <h1 class="hist-title">Leaderboard</h1>
-      <p class="hist-subtitle">See how you rank against other quiz masters.</p>
+    <section class="hist-header-text lb-hero-header">
+      <div class="lb-eyebrow"><span></span> Global competition</div>
+      <div class="lb-heading-row">
+        <div>
+          <h1 class="hist-title">Climb the ranks. <em>Own the board.</em></h1>
+          <p class="hist-subtitle">See how you stack up against the Quizary community and chase your next personal best.</p>
+        </div>
+        <div class="lb-rank-highlight"><span>YOUR RANK</span><strong>#12</strong><small>Top 1% of learners</small></div>
+      </div>
+      <div class="lb-hero-stats"><div><strong>1,245</strong><span>active challengers</span></div><div><strong>+6</strong><span>places this week</span></div><div><strong>1,250 XP</strong><span>your total score</span></div></div>
     </section>
 
     <!-- ============ BODY: TABLE + SIDE ============ -->
@@ -459,6 +466,7 @@
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/topbar.js"></script>
+    <script src="assets/js/leaderboard.js"></script>
 
 </body>
 </html>

@@ -20,12 +20,12 @@
  <nav class="sidebar" aria-label="Primary">
     <div class="sb-logo">Q</div>
 
-    <a href="index.html" class="sb-icon active" aria-current="page">
+    <a href="index.html" class="sb-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1v-9"/></svg>
       <span class="sb-tooltip">Home</span>
     </a>
 
-    <a href="categories.html" class="sb-icon">
+    <a href="categories.html" class="sb-icon active" aria-current="page">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
       <span class="sb-tooltip">Categories</span>
     </a>
@@ -89,9 +89,9 @@
 
       <div class="profile-wrap">
         <button class="profile" aria-expanded="false" aria-haspopup="true">
-          <div class="avatar avatar-fallback">PK</div>
+          <div class="avatar avatar-fallback">AK</div>
           <div>
-            <div class="profile-name">Pranav Kulkarni</div>
+            <div class="profile-name">Ali Khan</div>
             <div class="profile-level">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3 7.5 7.5 9 4.5-1.5 7.5-4.5 7.5-9V6L12 3Z"/></svg>
               Level 12
@@ -111,8 +111,9 @@
     <!-- ============ PAGE HEADER ============ -->
     <section class="cat-header-row">
       <div class="cat-header-text">
-        <h1 class="cat-title">Categories</h1>
-        <p class="cat-subtitle">Explore topics and challenge your knowledge</p>
+        <p class="cat-eyebrow"><span></span> DISCOVER YOUR NEXT OBSESSION</p>
+        <h1 class="cat-title">Where will curiosity<br>take you <em>today?</em></h1>
+        <p class="cat-subtitle">Explore a world of quick, rewarding challenges built around the things you love to learn.</p>
       </div>
 
       <div class="premium-card panel-gold cat-premium">
@@ -120,13 +121,24 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8 4 3 5-7 5 7 4-3-2 11H5L3 8Z"/></svg>
         </div>
         <div>
-          <div class="premium-title">Upgrade to Premium</div>
-          <div class="premium-sub">Unlock unlimited quizzes, detailed analytics and more.</div>
+          <div class="premium-title">Your strongest category</div>
+          <div class="premium-sub"><strong>General Knowledge</strong> · 85% mastery · You’re in the top 12%</div>
         </div>
         <a href="#" class="premium-arrow" aria-label="Upgrade">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
         </a>
       </div>
+    </section>
+
+    <section class="cat-spotlight" aria-labelledby="spotlightTitle">
+      <div class="cat-spotlight-copy">
+        <p class="cat-eyebrow"><span></span> FEATURED THIS WEEK</p>
+        <h2 id="spotlightTitle">Explore the edges of<br><em>our world.</em></h2>
+        <p>From hidden capitals to vast natural wonders, the Geography collection is ready when you are.</p>
+        <div class="spotlight-meta"><span>120 questions</span><span>•</span><span>Beginner friendly</span><span>•</span><strong>+300 XP</strong></div>
+        <a href="quiz.html?subject=geography" class="btn btn-primary">Explore Geography <span>→</span></a>
+      </div>
+      <div class="spotlight-orb" aria-hidden="true"><div class="orb-ring orb-ring--one"></div><div class="orb-ring orb-ring--two"></div><span>◌</span><i>✦</i><b>✦</b></div>
     </section>
 
     <!-- ============ SUMMARY STATS ============ -->
@@ -172,10 +184,24 @@
       </div>
     </section>
 
+    <section class="cat-library-head" aria-labelledby="libraryTitle">
+      <div>
+        <p class="cat-eyebrow"><span></span> QUIZ LIBRARY</p>
+        <h2 id="libraryTitle">Browse all categories</h2>
+        <p>Choose a direction and turn a few minutes into a new discovery.</p>
+      </div>
+      <div class="cat-filters" aria-label="Filter categories" role="tablist">
+        <button type="button" class="cat-filter is-active" data-filter="all" role="tab" aria-selected="true">All topics</button>
+        <button type="button" class="cat-filter" data-filter="learn" role="tab" aria-selected="false">Learn</button>
+        <button type="button" class="cat-filter" data-filter="culture" role="tab" aria-selected="false">Culture</button>
+        <button type="button" class="cat-filter" data-filter="play" role="tab" aria-selected="false">Play</button>
+      </div>
+    </section>
+
     <!-- ============ CATEGORY GRID ============ -->
     <section class="cat-grid">
 
-      <a href="quiz.html?subject=geography" class="panel cat-card">
+      <a href="quiz.html?subject=geography" class="panel cat-card cat-card--geography" data-category="learn" data-name="geography">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a13 13 0 0 0 0 18 13 13 0 0 0 0-18Z"/><path d="M3.5 9h17M3.5 15h17"/></svg>
         </div>
@@ -191,7 +217,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=science" class="panel cat-card">
+      <a href="quiz.html?subject=science" class="panel cat-card cat-card--science" data-category="learn" data-name="science">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg>
         </div>
@@ -207,7 +233,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=technology" class="panel cat-card">
+      <a href="quiz.html?subject=technology" class="panel cat-card cat-card--technology" data-category="learn" data-name="technology">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="11" rx="1.5"/><path d="M2.5 19.5h19"/><path d="M9.5 19.5 10 16h4l.5 3.5"/></svg>
         </div>
@@ -223,7 +249,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=history" class="panel cat-card">
+      <a href="quiz.html?subject=history" class="panel cat-card cat-card--history" data-category="culture" data-name="history">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V10.5l8-4 8 4V21"/><path d="M4 21h16"/><path d="M8 21v-6h3v6M13 21v-6h3v6"/><path d="M12 6.5V4"/></svg>
         </div>
@@ -239,7 +265,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=general-knowledge" class="panel cat-card">
+      <a href="quiz.html?subject=general-knowledge" class="panel cat-card cat-card--knowledge" data-category="learn" data-name="general knowledge">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5A2.5 2.5 0 0 0 7 7v.3A2.5 2.5 0 0 0 5.5 12 2.5 2.5 0 0 0 7 16.5V17a2.5 2.5 0 0 0 5 0V7a2.5 2.5 0 0 0-2.5-2.5Z"/><path d="M14.5 4.5A2.5 2.5 0 0 1 17 7v.3a2.5 2.5 0 0 1 1.5 4.7A2.5 2.5 0 0 1 17 16.5V17a2.5 2.5 0 0 1-5 0V7a2.5 2.5 0 0 1 2.5-2.5Z"/></svg>
         </div>
@@ -255,7 +281,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=sports" class="panel cat-card">
+      <a href="quiz.html?subject=sports" class="panel cat-card cat-card--sports" data-category="play" data-name="sports">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="m12 3.5 1.6 4.6M12 20.5l-1.6-4.6M3.5 12l4.6-1.6M20.5 12l-4.6 1.6M6 6l3.5 2.5M18 6l-3.5 2.5M6 18l3.5-2.5M18 18l-3.5-2.5"/></svg>
         </div>
@@ -271,7 +297,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=entertainment" class="panel cat-card">
+      <a href="quiz.html?subject=entertainment" class="panel cat-card cat-card--entertainment" data-category="culture" data-name="entertainment">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5 12 4l8 4.5v3L12 16l-8-4.5Z"/><path d="M8 10.5V17c0 1 1.8 2 4 2s4-1 4-2v-6.5"/></svg>
         </div>
@@ -287,7 +313,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=literature" class="panel cat-card">
+      <a href="quiz.html?subject=literature" class="panel cat-card cat-card--literature" data-category="culture" data-name="literature">
         <div class="icon-circle icon-circle-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h9.5A2.5 2.5 0 0 1 17 7v13H7.5A2.5 2.5 0 0 1 5 17.5v-13Z"/><path d="M17 7h2.5v13H9.5"/><path d="M5 17.5A2.5 2.5 0 0 1 7.5 15H17"/></svg>
         </div>
@@ -303,7 +329,7 @@
         </div>
       </a>
 
-      <a href="quiz.html?subject=maths" class="panel cat-card">
+      <a href="quiz.html?subject=maths" class="panel cat-card cat-card--maths" data-category="learn" data-name="maths mathematics">
         <div class="icon-circle icon-circle-lg cat-icon-sigma">Σ</div>
         <div class="cat-card-text">
           <h3 class="cat-card-title">Maths</h3>
@@ -336,6 +362,7 @@
 
   </main>
 
+  <script src="assets/js/categories.js"></script>
   <script src="assets/js/nav.js"></script>
   <script src="assets/js/topbar.js"></script>
 

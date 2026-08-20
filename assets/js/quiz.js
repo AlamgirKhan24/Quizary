@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressFillEl = document.getElementById('quizProgressFill');
   const progressPctEl = document.getElementById('quizProgressPct');
   const questionEl = document.getElementById('quizQuestion');
+  const questionNumberEl = document.getElementById('quizQuestionNumber');
   const optionsEl = document.getElementById('quizOptions');
   const pointsEl = document.getElementById('quizPoints');
   const factEl = document.getElementById('quizFactText');
@@ -109,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (titleEl) titleEl.textContent = quiz.title;
     if (progressTextEl) progressTextEl.textContent = `Question ${state.currentIndex + 1} of ${TOTAL}`;
     if (questionEl) questionEl.textContent = q.text;
+    if (questionNumberEl) questionNumberEl.textContent = String(state.currentIndex + 1).padStart(2, '0');
     if (factEl) factEl.textContent = q.fact || '';
 
     const pct = Math.round(((state.currentIndex + 1) / TOTAL) * 100);
@@ -215,6 +217,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       goToQuestion(state.currentIndex + 1);
     }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.target.matches('input, textarea, select, button')) return;
+    if (event.key === 'ArrowLeft' && state.currentIndex > 0) goToQuestion(state.currentIndex - 1);
+    if (event.key === 'ArrowRight' && state.currentIndex < TOTAL - 1) goToQuestion(state.currentIndex + 1);
   });
 
   // ---- Real countdown timer ----
